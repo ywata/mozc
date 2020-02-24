@@ -39,10 +39,11 @@ RUN apt install -y clang python pkg-config git curl bzip2 unzip make
 RUN apt install -y libibus-1.0-dev libglib2.0-dev qtbase5-dev libgtk2.0-dev libxcb-xfixes0-dev
 ## Packages for Android
 RUN apt install -y --no-install-recommends openjdk-7-jdk openjdk-7-jre-headless libjsr305-java ant zip libc6-i386 lib32stdc++6 lib32ncurses5 lib32z1
-## Packages for NaCl
-RUN apt install -y libc6-i386 lib32stdc++6
-## For emacsian
-RUN apt install -y emacs
+
+# ## Packages for NaCl
+# RUN apt install -y libc6-i386 lib32stdc++6
+# ## For emacsian
+# RUN apt install -y emacs
 
 ENV HOME /home/mozc_builder
 RUN useradd --create-home --shell /bin/bash --base-dir /home mozc_builder
@@ -64,17 +65,18 @@ RUN echo y | android update sdk --all --force --no-ui --filter platform-tool
 RUN mkdir -p ${ANDROID_HOME}/extras/android
 RUN curl -LO https://dl.google.com/dl/android/repository/support_r23.1.1.zip && unzip -d ${ANDROID_HOME}/extras/android support_r23.1.1.zip support/v13/android-support-v13.jar && rm support_r23.1.1.zip
 
-## NaCl SDK
-RUN curl -LO http://storage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/nacl_sdk.zip && unzip nacl_sdk.zip && rm nacl_sdk.zip
-RUN cd nacl_sdk && ./naclsdk install pepper_49
-ENV NACL_SDK_ROOT /home/mozc_builder/work/nacl_sdk/pepper_49
+# ## NaCl SDK
+# RUN curl -LO http://storage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/nacl_sdk.zip && unzip nacl_sdk.zip && rm nacl_sdk.zip
+# RUN cd nacl_sdk && ./naclsdk install pepper_49
+# ENV NACL_SDK_ROOT /home/mozc_builder/work/nacl_sdk/pepper_49
 
 ## depot_tools for Ninja prebuilt
 RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 ENV PATH $PATH:/home/mozc_builder/work/depot_tools
 
-# check out Mozc source with submodules
-RUN git clone https://github.com/google/mozc.git -b master --single-branch --recursive
+## check out Mozc source with submodules
+#RUN git clone https://github.com/google/mozc.git -b master --single-branch --recursive
 
-WORKDIR /home/mozc_builder/work/mozc/src
+#WORKDIR /home/mozc_builder/work/mozc/src
+RUN mkdir -p /home/mozc_builder/work/android/
 ENTRYPOINT bash

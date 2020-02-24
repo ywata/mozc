@@ -28,4 +28,8 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-docker run --interactive --tty --rm $USER/mozc_ubuntu14.04
+if [ -d "$MOZC_BUILD_DIR_LOCAL" ]; then
+   docker run --interactive --tty --volume $MOZC_BUILD_DIR_LOCAL:/home/mozc_builder/work/android/ --rm $USER/mozc_ubuntu14.04 
+else
+    docker run --interactive --tty --rm $USER/mozc_ubuntu14.04
+fi    
