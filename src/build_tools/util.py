@@ -91,7 +91,9 @@ def RunOrDie(argv):
   logging.info('Running: %s', ' '.join(argv))
   process = subprocess.Popen(argv)
 
-  if process.wait() != 0:
+  wait = process.wait()
+  logging.info('wait() returns: %d', wait)
+  if wait != 0:
     error_label = ColoredText('ERROR', logging.ERROR)
     raise RunOrDieError('\n'.join(['',
                                    '==========',

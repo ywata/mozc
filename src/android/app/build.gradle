@@ -35,16 +35,16 @@ android {
             path "CMakeLists.txt"
         }
     }
-/*    useLibrary 'org.apache.http.legacy'
     sourceSets {
         main {
-            java.srcDirs 'src/main/build/java'
+            java.srcDirs 'src/main/build/java', '../gen'
             resources.srcDirs 'src/main/build/libs'
             res.srcDirs 'src/main/build/res'
             assets.srcDirs 'src/main/build/assets'
+	    
             //proto.srcDir        'src/main/build/protobuf'
         }
-    }*/
+    }
     flavorDimensions "default"
     productFlavors {
         develop {
@@ -54,7 +54,11 @@ android {
         product {
         }
     }
+
 }
+
+
+
 
 /*
 task preparation(type: Exec) {

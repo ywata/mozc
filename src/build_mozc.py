@@ -65,6 +65,8 @@ from build_tools.util import RemoveFile
 from build_tools.util import RunOrDie
 from build_tools.util import RunOrDieError
 
+logging.basicConfig(level=logging.DEBUG)
+
 if not IsWindows():
   # android_util depends on fcntl module which doesn't exist in Windows.
   # pylint: disable=g-import-not-at-top
