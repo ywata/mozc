@@ -54,7 +54,7 @@ RUN mkdir -p /home/mozc_builder/work
 WORKDIR /home/mozc_builder/work
 
 ## Android SDK/NDK
-RUN curl -LO http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip && unzip android-ndk-r16b-linux-x86_64.zip && rm android-ndk-r16b-linux-x86_64.zip
+RUN curl -LO http://dl.google.com/android/repository/Android-ndk-r16b-linux-x86_64.zip && unzip android-ndk-r16b-linux-x86_64.zip && rm android-ndk-r16b-linux-x86_64.zip
 RUN curl -L http://dl.google.com/android/android-sdk_r24.1.2-linux.tgz | tar -zx
 ENV ANDROID_NDK_HOME /home/mozc_builder/work/android-ndk-r16b
 ENV ANDROID_HOME /home/mozc_builder/work/android-sdk-linux
