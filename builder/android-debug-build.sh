@@ -12,10 +12,11 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 echo $DIR
 
 cd $DIR/../src
-python2 build_mozc.py gyp --target_platform=Android \
+
+python2 build_mozc.py gyp --target_platform=Android --android_arch=arm64 \
  && python2 build_mozc.py build \
         -c Debug \
-        android/android.gyp:apk 
+        android/android.gyp:adt_apk_dependencies
 
-#cd $DIR/../src/project/android-studio
-#./gradlew assembleDebug
+cd $DIR/../src/android
+./gradlew assembleDebug
