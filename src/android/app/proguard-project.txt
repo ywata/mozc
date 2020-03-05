@@ -1,31 +1,9 @@
 # Copyright 2010-2018, Google Inc.
+# Copyright 2017-2018 OldNoviceWizard Coooooooozy
 # All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are
-# met:
-#
-#     * Redistributions of source code must retain the above copyright
-# notice, this list of conditions and the following disclaimer.
-#     * Redistributions in binary form must reproduce the above
-# copyright notice, this list of conditions and the following disclaimer
-# in the documentation and/or other materials provided with the
-# distribution.
-#     * Neither the name of Google Inc. nor the names of its
-# contributors may be used to endorse or promote products derived from
-# this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# ProGuard manual examples
+# https://www.guardsquare.com/en/proguard/manual/examples
 
 # In order to include line number in stack trace below descriptions are needed.
 -renamesourcefileattribute SourceFile
@@ -38,9 +16,8 @@
     <methods>;
 }
 
-
 # This class is created by reflection.
--keep class org.mozc.android.inputmethod.japanese.MozcView$RegionInsetsCalculator
+-keep class org.mozc.android.inputmethod.japanese.KurageView$RegionInsetsCalculator
 
 # Can be accessed via reflection.
 -keep public class * extends android.app.Fragment
@@ -48,8 +25,8 @@
     <methods>;
 }
 
-# libmozc.so depends on those methods.
--keepclassmembers class org.mozc.android.inputmethod.japanese.session.MozcJNI {
+# libkurage.so depends on those methods.
+-keepclassmembers class org.mozc.android.inputmethod.japanese.session.KurageJNI {
     native <methods>;
 }
 
@@ -65,7 +42,7 @@
 }
 
 # Needed for Guava library.
--libraryjars libs/jsr305.jar
+#-libraryjars libs/jsr305.jar
 -dontwarn sun.misc.Unsafe
 -dontwarn com.google.common.collect.MinMaxPriorityQueue
 # Following suppression items are introduced for guava14.
@@ -75,3 +52,39 @@
 # Note: "Warning" in Proguard is like an error because it stops the build process.
 -dontwarn javax.inject.Inject
 -dontwarn javax.inject.Singleton
+
+# Needed for apache (obsoleted) library.
+-dontwarn org.apache.commons.**
+-keep class org.apache.http.** { *; }
+-dontwarn org.apache.http.**
+-dontwarn android.webkit.WebView
+-dontwarn android.webkit.WebViewClient
+
+# compile 'com.google.guava:guava:23.5-android'
+-dontwarn com.google.common.base.**
+-keep class com.google.common.base.** {*;}
+-dontwarn com.google.errorprone.annotations.**
+-keep class com.google.errorprone.annotations.** {*;}
+-dontwarn com.google.j2objc.annotations.**
+-keep class com.google.j2objc.annotations.** { *; }
+-dontwarn java.lang.ClassValue
+-keep class java.lang.ClassValue { *; }
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+-keep class org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement { *; }
+
+-dontwarn javax.annotation.**
+-dontwarn javax.inject.**
+
+-dontwarn sun.misc.Unsafe
+-dontwarn com.google.common.collect.MinMaxPriorityQueue
+-dontwarn com.google.common.util.concurrent.FuturesGetChecked**
+-dontwarn javax.lang.model.element.Modifier
+-dontwarn afu.org.checkerframework.**
+-dontwarn org.checkerframework.**
+
+
+## Keep public enums
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
