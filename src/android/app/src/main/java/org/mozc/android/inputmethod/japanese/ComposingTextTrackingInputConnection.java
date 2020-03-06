@@ -31,12 +31,11 @@ package org.mozc.android.inputmethod.japanese;
 
 import android.annotation.TargetApi;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.KeyEvent;
-import android.view.inputmethod.CompletionInfo;
-import android.view.inputmethod.CorrectionInfo;
-import android.view.inputmethod.ExtractedText;
-import android.view.inputmethod.ExtractedTextRequest;
-import android.view.inputmethod.InputConnection;
+import android.view.inputmethod.*;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * The proxy of the {@code InputConnection} with tracking the composing text.
@@ -92,6 +91,11 @@ public class ComposingTextTrackingInputConnection implements InputConnection {
   @Override
   public boolean deleteSurroundingText(int beforeLength, int afterLength) {
     return baseConnection.deleteSurroundingText(beforeLength, afterLength);
+  }
+
+  @Override
+  public boolean deleteSurroundingTextInCodePoints(int beforeLength, int afterLength) {
+    return false;
   }
 
   @Override
@@ -197,5 +201,20 @@ public class ComposingTextTrackingInputConnection implements InputConnection {
   @Override
   public boolean requestCursorUpdates(int cursorUpdateMode) {
     return baseConnection.requestCursorUpdates(cursorUpdateMode);
+  }
+
+  @Override
+  public Handler getHandler() {
+    return null;
+  }
+
+  @Override
+  public void closeConnection() {
+
+  }
+
+  @Override
+  public boolean commitContent(@NonNull InputContentInfo inputContentInfo, int flags, @Nullable Bundle opts) {
+    return false;
   }
 }
