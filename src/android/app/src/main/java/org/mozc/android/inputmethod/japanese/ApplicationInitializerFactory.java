@@ -33,7 +33,7 @@ import org.mozc.android.inputmethod.japanese.MozcUtil.TelephonyManagerInterface;
 import org.mozc.android.inputmethod.japanese.emoji.EmojiProviderType;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil.PreferenceManagerStaticInterface;
-import org.mozc.android.inputmethod.japanese.R;
+//import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.util.LauncherIconManagerFactory.LauncherIconManager;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Optional;
@@ -48,7 +48,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
+//import android.support.v4.app.NotificationCompat;
 import android.util.DisplayMetrics;
 
 import java.io.File;
@@ -133,6 +133,7 @@ public class ApplicationInitializerFactory {
   public static class ApplicationInitializer {
 
     static final int LAUNCHED_AT_LEAST_ONCE_DEPRECATED_VERSION_CODE = 1429;
+//    private static final Object R = null ; /* TODO: null is not a proper thing. */
 
     final ApplicationInitializationStatus initializationStatus;
     final Context context;
