@@ -28,7 +28,11 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package org.mozc.android.inputmethod.japanese.accessibility;
-
+import androidx.core.view.AccessibilityDelegateCompat;
+import androidx.core.view.accessibility.AccessibilityEventCompat;
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
+import androidx.core.view.accessibility.AccessibilityNodeProviderCompat;
+import androidx.legacy.view.ViewCompat;
 import org.mozc.android.inputmethod.japanese.keyboard.Flick.Direction;
 import org.mozc.android.inputmethod.japanese.keyboard.Key;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyEntity;
@@ -45,11 +49,11 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
-import android.support.v4.view.AccessibilityDelegateCompat;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.accessibility.AccessibilityEventCompat;
-import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
-import android.support.v4.view.accessibility.AccessibilityNodeProviderCompat;
+//import android.support.v4.view.AccessibilityDelegateCompat;
+//import android.support.v4.view.ViewCompat;
+//import android.support.v4.view.accessibility.AccessibilityEventCompat;
+//import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
+//import android.support.v4.view.accessibility.AccessibilityNodeProviderCompat;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;

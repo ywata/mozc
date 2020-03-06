@@ -29,6 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese;
 
+import androidx.legacy.view.ViewCompat;
 import org.mozc.android.inputmethod.japanese.accessibility.AccessibilityUtil;
 import org.mozc.android.inputmethod.japanese.accessibility.CandidateWindowAccessibilityDelegate;
 import org.mozc.android.inputmethod.japanese.emoji.EmojiProviderType;
@@ -52,7 +53,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.ViewCompat;
+//import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;

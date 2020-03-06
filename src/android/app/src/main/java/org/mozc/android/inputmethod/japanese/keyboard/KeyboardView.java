@@ -29,6 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese.keyboard;
 
+import androidx.legacy.view.ViewCompat;
 import org.mozc.android.inputmethod.japanese.MemoryManageable;
 import org.mozc.android.inputmethod.japanese.accessibility.AccessibilityUtil;
 import org.mozc.android.inputmethod.japanese.accessibility.KeyboardAccessibilityDelegate;
@@ -50,7 +51,7 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v4.view.ViewCompat;
+//import android.support.v4.view.ViewCompat;
 import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
