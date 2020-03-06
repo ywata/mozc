@@ -348,7 +348,7 @@ public class FloatingCandidateLayoutRenderer {
       Canvas canvas, String text, Paint paint, float x, float y, Align align, float maxWidth) {
     float textWidth = paint.measureText(text);
 
-    int saveCount = canvas.save(Canvas.MATRIX_SAVE_FLAG);
+    int saveCount = canvas.save();
     Align originalAlign = paint.getTextAlign();
     try {
       canvas.translate(x, y);
