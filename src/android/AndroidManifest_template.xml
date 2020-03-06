@@ -33,7 +33,7 @@
           package="@ANDROID_APPLICATION_ID@"
           android:versionCode="@ANDROID_VERSION_CODE@"
           android:versionName="@MAJOR@.@MINOR@.@BUILD@.@REVISION@-@ANDROID_ARCH@">
-  <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
+  <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="28" />
 
   <!-- Google Japanese Input (the main code) requires the following permissions. -->
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -148,5 +148,6 @@
     <!-- The activity is used for testing views. -->
     <activity android:name="android.app.Activity" />
     <activity android:name="org.mozc.android.inputmethod.japanese.preference.MozcPreferenceDummy" />
+
   </application>
 </manifest>

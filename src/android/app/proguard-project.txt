@@ -1,0 +1,90 @@
+# Copyright 2010-2018, Google Inc.
+# Copyright 2017-2018 OldNoviceWizard Coooooooozy
+# All rights reserved.
+
+# ProGuard manual examples
+# https://www.guardsquare.com/en/proguard/manual/examples
+
+# In order to include line number in stack trace below descriptions are needed.
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable
+-useuniqueclassmembernames
+
+# Keep the method names of the generated protobuf classes,
+# because the protobuf library uses reflections.
+-keepclassmembers class org.mozc.android.inputmethod.japanese.protobuf.* {
+    <methods>;
+}
+
+# This class is created by reflection.
+-keep class org.mozc.android.inputmethod.japanese.KurageView$RegionInsetsCalculator
+
+# Can be accessed via reflection.
+-keep public class * extends android.app.Fragment
+-keepclassmembers class * extends org.mozc.android.inputmethod.japanese.util.ImeSwitcherFactory$ImeSwitcher {
+    <methods>;
+}
+
+# libkurage.so depends on those methods.
+-keepclassmembers class org.mozc.android.inputmethod.japanese.session.KurageJNI {
+    native <methods>;
+}
+
+# The classes in nativecallback package must keep original class name and method name
+# in order to be called back from native layer.
+-keepclasseswithmembers class org.mozc.android.inputmethod.japanese.nativecallback.* {
+    public static <methods>;
+}
+
+# Skin's fields are accessed by reflection.
+-keepclassmembers class org.mozc.android.inputmethod.japanese.view.Skin {
+    <fields>;
+}
+
+# Needed for Guava library.
+#-libraryjars libs/jsr305.jar
+-dontwarn sun.misc.Unsafe
+-dontwarn com.google.common.collect.MinMaxPriorityQueue
+# Following suppression items are introduced for guava14.
+# To resolve these references Guice (or its compatible) library is needed
+# but we don't want to include it into our build dependency.
+# Instead just ignore the warnings.
+# Note: "Warning" in Proguard is like an error because it stops the build process.
+-dontwarn javax.inject.Inject
+-dontwarn javax.inject.Singleton
+
+# Needed for apache (obsoleted) library.
+-dontwarn org.apache.commons.**
+-keep class org.apache.http.** { *; }
+-dontwarn org.apache.http.**
+-dontwarn android.webkit.WebView
+-dontwarn android.webkit.WebViewClient
+
+# compile 'com.google.guava:guava:23.5-android'
+-dontwarn com.google.common.base.**
+-keep class com.google.common.base.** {*;}
+-dontwarn com.google.errorprone.annotations.**
+-keep class com.google.errorprone.annotations.** {*;}
+-dontwarn com.google.j2objc.annotations.**
+-keep class com.google.j2objc.annotations.** { *; }
+-dontwarn java.lang.ClassValue
+-keep class java.lang.ClassValue { *; }
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+-keep class org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement { *; }
+
+-dontwarn javax.annotation.**
+-dontwarn javax.inject.**
+
+-dontwarn sun.misc.Unsafe
+-dontwarn com.google.common.collect.MinMaxPriorityQueue
+-dontwarn com.google.common.util.concurrent.FuturesGetChecked**
+-dontwarn javax.lang.model.element.Modifier
+-dontwarn afu.org.checkerframework.**
+-dontwarn org.checkerframework.**
+
+
+## Keep public enums
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}

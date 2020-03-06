@@ -86,7 +86,7 @@
     ['android_arch=="arm"', {
       'variables': {
         'abi': 'armeabi-v7a',
-        'ndk_target_api_level': '14',
+        'ndk_target_api_level': '28',
       },
     }],
     ['android_arch=="x86"', {
@@ -104,13 +104,13 @@
     ['android_arch=="arm64"', {
       'variables': {
         'abi': 'arm64-v8a',
-        'ndk_target_api_level': '21',
+        'ndk_target_api_level': '28',
       },
     }],
     ['android_arch=="x86_64"', {
       'variables': {
         'abi': 'x86_64',
-        'ndk_target_api_level': '21',
+        'ndk_target_api_level': '28',
       },
     }],
     ['android_arch=="mips64"', {
