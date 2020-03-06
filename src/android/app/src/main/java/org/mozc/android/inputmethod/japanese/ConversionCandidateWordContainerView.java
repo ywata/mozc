@@ -30,7 +30,7 @@
 package org.mozc.android.inputmethod.japanese;
 
 import org.mozc.android.inputmethod.japanese.CandidateView.ConversionCandidateWordView;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.ui.ConversionCandidateLayouter;
 import com.google.common.base.Preconditions;
 

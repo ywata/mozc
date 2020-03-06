@@ -31,7 +31,7 @@ package org.mozc.android.inputmethod.japanese;
 
 import org.mozc.android.inputmethod.japanese.FirstTimeLaunchActivity.SendUsageStatsChangeListener;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.testing.ActivityInstrumentationTestCase2WithMock;
 import org.mozc.android.inputmethod.japanese.testing.MozcPreferenceUtil;
 import com.google.common.base.Optional;

@@ -36,7 +36,7 @@ import org.mozc.android.inputmethod.japanese.keyboard.Keyboard.KeyboardSpecifica
 import org.mozc.android.inputmethod.japanese.preference.ClientSidePreference.KeyboardLayout;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchEvent;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Request;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.session.SessionExecutor;
 import org.mozc.android.inputmethod.japanese.testing.MemoryLogger;
 import org.mozc.android.inputmethod.japanese.testing.mocking.MozcMockSupport;
