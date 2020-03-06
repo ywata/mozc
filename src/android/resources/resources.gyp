@@ -153,7 +153,7 @@
             'dummy_make_symbolic_link',
           ],
           'action': [
-            'ln', '-s', '-f',
+            'ln', '-rs', '-f',
             '<(sdk_resources_dir)/res',
             'res',
           ],
@@ -167,7 +167,7 @@
             'dummy_copy_configuration_dependent_resources',
           ],
           'action': [
-            'ln', '-s', '-f',
+            'ln', '-rs', '-f',
             '<(launcher_icon_bools)',
             '<(sdk_resources_dir)/res/values/',
           ],
