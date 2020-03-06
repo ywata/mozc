@@ -39,6 +39,8 @@ import android.graphics.Shader;
 import android.graphics.PorterDuff.Mode;
 import android.util.FloatMath;
 
+import static java.lang.Math.sqrt;
+
 /**
  * Drawable to render a triangular highlight, whose vertices are the center and two adjacent
  * vertices of the key background.
@@ -121,7 +123,7 @@ public class TriangularHighlightDrawable extends BaseBackgroundDrawable {
     float dx1 = x1 - centerX;
     float dy1 = y1 - centerY;
 
-    float shadeLengthRatio = shadeLength / FloatMath.sqrt(dx1 * dx1 + dy1 * dy1);
+    float shadeLengthRatio = shadeLength / (float)sqrt(dx1 * dx1 + dy1 * dy1);
     float nx1 = dy1 * shadeLengthRatio;
     float ny1 = -dx1 * shadeLengthRatio;
 
