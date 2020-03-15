@@ -65,7 +65,7 @@
           # TODO(komatsu): use ant.gypi when the build rule is moved to tests/.
           'ninja_use_console': 1,
           'action': [
-            '../build_tools/run_after_chdir.py', 'tests',
+            '../build_tools/run_after_chdir.py', 'app/src/test',
             'ant',
             'debug',
             '-Dsdk.dir=<(android_home)',
@@ -186,16 +186,16 @@
           'inputs': [
             '../build_tools/replace_version.py',
             '../mozc_version.txt',
-            'tests/AndroidManifest_template.xml',
+            'app/src/test/AndroidManifest_template.xml',
           ],
           'outputs': [
-            'tests/AndroidManifest.xml',
+            'app/src/test/AndroidManifest.xml',
           ],
           'action': [
             'python', '../build_tools/replace_version.py',
             '--version_file', '../mozc_version.txt',
-            '--input', 'tests/AndroidManifest_template.xml',
-            '--output', 'tests/AndroidManifest.xml',
+            '--input', 'app/src/test/AndroidManifest_template.xml',
+            '--output', 'app/src/test/AndroidManifest.xml',
             '--branding', '<(branding)',
           ],
         },
@@ -373,12 +373,12 @@
             '<(dexmaker_jar_path)',
           ],
           'outputs': [
-            'tests/libs/dexmaker.jar'
+            'app/src/test/libs/dexmaker.jar'
           ],
           'action': [
             '<@(copy_file)',
             '<(_inputs)',
-            'tests/libs',
+            'app/src/test/libs',
           ]
         },
       ],
@@ -393,12 +393,12 @@
             '<(easymock_jar_path)',
           ],
           'outputs': [
-            'tests/libs/easymock-3_1.jar'
+            'app/src/test/libs/easymock-3_1.jar'
           ],
           'action': [
             '<@(copy_file)',
             '<(_inputs)',
-            'tests/libs',
+            'app/src/test/libs',
           ]
         },
       ],
@@ -448,12 +448,12 @@
             '<(guava_testlib_jar_path)',
           ],
           'outputs': [
-            'tests/libs/guava-testlib.jar',
+            'app/src/test/libs/guava-testlib.jar',
           ],
           'action': [
             '<@(copy_file)',
             '<(_inputs)',
-            'tests/libs/guava-testlib.jar',
+            'app/src/test/libs/guava-testlib.jar',
           ]
         },
         {
@@ -514,9 +514,10 @@
       'target_name': 'jnitestingbackdoor',  # libjnitestingbackdoor.so
       'type': 'shared_library',
       'sources': [
-        'tests/jni/jnitestingbackdoor.cc',
+        'app/src/test/jni/jnitestingbackdoor.cc',
       ],
-      'product_dir': '<(abs_android_dir)/tests/libs/<(abi)',
+      # tests or app/src/test
+      'product_dir': '<(abs_android_dir)/app/src/test/libs/<(abi)',
       'dependencies': [
         '../base/base.gyp:base',
         '../net/net.gyp:http_client',
