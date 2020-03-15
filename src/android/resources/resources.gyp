@@ -76,30 +76,30 @@
     }],
   ],
   'targets': [
-    {
-      'target_name': 'resources',
-      'type': 'none',
-      'dependencies': [
-        'resources_project',
-      ],
-      'actions': [
-        {
-          'action_name': 'build_resources',
-          'inputs': [
-            'AndroidManifest.xml',
-            'build.xml',
-            'project.properties',
-            'ant.properties',
-            'proguard-project.txt',
-          ],
-          'outputs': [
-            'bin/classes.jar',
-            'gen/org/mozc/android/inputmethod/japanese/resources/R.java',
-          ],
-          'includes': ['../ant.gypi'],
-        },
-      ],
-    },
+    # {
+    #   'target_name': 'resources',
+    #   'type': 'none',
+    #   'dependencies': [
+    #     'resources_project',
+    #   ],
+    #   'actions': [
+    #     {
+    #       'action_name': 'build_resources',
+    #       'inputs': [
+    #         'AndroidManifest.xml',
+    #         'build.xml',
+    #         'project.properties',
+    #         'ant.properties',
+    #         'proguard-project.txt',
+    #       ],
+    #       'outputs': [
+    #         'bin/classes.jar',
+    #         'gen/org/mozc/android/inputmethod/japanese/resources/R.java',
+    #       ],
+    #       'includes': ['../ant.gypi'],
+    #     },
+    #   ],
+    # },
     {
       'target_name': 'resources_project',
       'type': 'none',
