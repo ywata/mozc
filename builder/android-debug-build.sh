@@ -20,7 +20,7 @@ fi
 
 
 cd $DIR/../src/android/app/src/main
-if [ ! -e res ]; then
+if [ ! -e  "$DIR/../src/android/app/src/main" ]; then
     # TODO: This should be better handled by resource.gyp or similar.
     ln -s ../../../../out_android/Debug/gen/android/resources/res .
 fi
