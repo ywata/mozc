@@ -13,8 +13,20 @@ echo $DIR
 
 cd $DIR/../src
 
-python2 build_mozc.py gyp --target_platform=Android --android_arch=arm64 \
- && python2 build_mozc.py build -c Debug android/android.gyp:adt_apk_dependencies
+python2 build_mozc.py gyp --target_platform=Android --android_arch=arm64
+if [ $? -ne 0 ]; then
+    echo "build_mozc.py gyp failed" 2&>1
+fi
+
+
+cd $DIR/../src/android/app/src/main
+if [ ! -e res ]; then
+    # TODO: This should be better handled by resource.gyp or similar.
+    ln -s ../../../../out_android/Debug/gen/android/resources/res .
+fi
+
+cd $DIR/../src
+python2 build_mozc.py build -c Debug android/android.gyp:adt_apk_dependencies
 
 cd $DIR/../src/android
 ./gradlew assembleDebug
