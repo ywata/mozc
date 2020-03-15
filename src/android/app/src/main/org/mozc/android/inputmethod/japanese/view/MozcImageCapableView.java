@@ -29,7 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese.view;
 
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import com.google.common.base.Preconditions;
 
 import android.content.res.Resources;

@@ -35,7 +35,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Candidates
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Candidates.Candidate;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Category;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Command;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
