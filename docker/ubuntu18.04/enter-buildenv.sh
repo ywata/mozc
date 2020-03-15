@@ -29,7 +29,7 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 if [ -d ${MOZC_MOUNT_DIR} ] ; then
-   docker run --volume ${MOZC_MOUNT_DIR}:/home/builder/workshop --interactive --tty --rm $USER/mozc_ubuntu18.04 ;
+   docker run --volume ${MOZC_MOUNT_DIR}:/home/builder/workshop/ --interactive --tty --rm $USER/mozc_ubuntu18.04 ;
 else
-    docker run --interactive --tty --rm $USER/mozc_ubuntu18.04
+   docker run --interactive --tty --rm $USER/mozc_ubuntu18.04
 fi
