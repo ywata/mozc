@@ -94,34 +94,34 @@
         },
       ],
     },
-    {
-      'target_name': 'apk',
-      'type': 'none',
-      'dependencies': [
-        'resources/resources.gyp:resources',
-        'sdk_apk_dependencies',
-        'userfeedback/userfeedback.gyp:userfeedback',
-      ],
-      'actions': [
-        {
-          'action_name': 'apk',
-          'inputs': [
-            'AndroidManifest.xml',
-            'build.xml',
-            'project.properties',
-            'ant.properties',
-            'proguard-project.txt',
-          ],
-          # The actual output is one of
-          #   'bin/GoogleJapaneseInput-debug.apk'
-          #   'bin/GoogleJapaneseInput-release.apk'
-          #   'bin/GoogleJapaneseInput-unsigned.apk'
-          # depending on CONFIGURATION_NAME and/or key.store.
-          'outputs': ['dummy_apk'],
-          'includes': ['ant.gypi'],
-        },
-      ],
-    },
+    # {
+    #   'target_name': 'apk',
+    #   'type': 'none',
+    #   'dependencies': [
+    #     'resources/resources.gyp:resources',
+    #     'sdk_apk_dependencies',
+    #     'userfeedback/userfeedback.gyp:userfeedback',
+    #   ],
+    #   'actions': [
+    #     {
+    #       'action_name': 'apk',
+    #       'inputs': [
+    #         'AndroidManifest.xml',
+    #         'build.xml',
+    #         'project.properties',
+    #         'ant.properties',
+    #         'proguard-project.txt',
+    #       ],
+    #       # The actual output is one of
+    #       #   'bin/GoogleJapaneseInput-debug.apk'
+    #       #   'bin/GoogleJapaneseInput-release.apk'
+    #       #   'bin/GoogleJapaneseInput-unsigned.apk'
+    #       # depending on CONFIGURATION_NAME and/or key.store.
+    #       'outputs': ['dummy_apk'],
+    #       'includes': ['ant.gypi'],
+    #     },
+    #   ],
+    # },
     {
       'target_name': 'sdk_apk_dependencies',
       'type': 'none',
@@ -168,16 +168,16 @@
           'inputs': [
             '../build_tools/replace_version.py',
             '../mozc_version.txt',
-            'AndroidManifest_template.xml',
+            'app/src/main/AndroidManifest_template.xml',
           ],
           'outputs': [
-            'AndroidManifest.xml',
+            'app/src/main/ndroidManifest.xml',
           ],
           'action': [
             'python', '../build_tools/replace_version.py',
             '--version_file', '../mozc_version.txt',
-            '--input', 'AndroidManifest_template.xml',
-            '--output', 'AndroidManifest.xml',
+            '--input', 'app/src/main/AndroidManifest_template.xml',
+            '--output', 'app/src/main/AndroidManifest.xml',
             '--branding', '<(branding)',
           ],
         },
