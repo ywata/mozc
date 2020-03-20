@@ -34,7 +34,7 @@ import static org.easymock.EasyMock.eq;
 import static org.easymock.EasyMock.expect;
 
 import org.mozc.android.inputmethod.japanese.MozcLog;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 

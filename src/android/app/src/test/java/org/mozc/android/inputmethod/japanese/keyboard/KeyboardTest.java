@@ -31,7 +31,7 @@ package org.mozc.android.inputmethod.japanese.keyboard;
 
 import org.mozc.android.inputmethod.japanese.KeyboardSpecificationName;
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard.KeyboardSpecification;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import com.google.common.base.Optional;
 
 import android.app.Instrumentation;

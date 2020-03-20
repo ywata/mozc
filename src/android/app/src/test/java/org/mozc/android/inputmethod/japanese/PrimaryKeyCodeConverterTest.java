@@ -37,7 +37,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchEvent;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.KeyEvent.ProbableKeyEvent;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.KeyEvent.SpecialKey;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;

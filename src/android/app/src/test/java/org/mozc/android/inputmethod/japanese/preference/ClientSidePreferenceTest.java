@@ -32,7 +32,7 @@ package org.mozc.android.inputmethod.japanese.preference;
 import org.mozc.android.inputmethod.japanese.ViewManagerInterface.LayoutAdjustment;
 import org.mozc.android.inputmethod.japanese.preference.ClientSidePreference.InputStyle;
 import org.mozc.android.inputmethod.japanese.preference.ClientSidePreference.KeyboardLayout;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.testing.MozcPreferenceUtil;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.view.SkinType;

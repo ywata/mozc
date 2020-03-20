@@ -66,7 +66,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.CompositionM
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Output;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Preedit;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Preedit.Segment;
-import org.mozc.android.inputmethod.japanese.resources.R;
+import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.testing.VisibilityProxy;
