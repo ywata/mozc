@@ -38,7 +38,7 @@ import org.mozc.android.inputmethod.japanese.CandidateView.ConversionCandidateSe
 import org.mozc.android.inputmethod.japanese.CandidateView.ConversionCandidateWordView;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateList;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MozcLayoutUtil;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Row;
@@ -57,7 +57,7 @@ import java.util.Collections;
 
 /**
  */
-public class CandidateViewTest extends InstrumentationTestCaseWithMock {
+public class CandidateViewTest extends InstrumentationMock {
   @SmallTest
   public void testConversionCandidateSelectListener() {
     ViewEventListener viewEventListener = createMock(ViewEventListener.class);

@@ -36,7 +36,7 @@ import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.same;
 import static org.junit.Assert.*;
 
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -48,7 +48,7 @@ import android.view.inputmethod.InputConnection;
 
 /**
  */
-public class ComposingTextTrackingInputConnectionTest extends InstrumentationTestCaseWithMock {
+public class ComposingTextTrackingInputConnectionTest extends InstrumentationMock {
   private InputConnection inputConnectionMock;
   private ComposingTextTrackingInputConnection composingTextTrackingInputConnection;
 

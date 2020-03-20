@@ -34,7 +34,7 @@ import static org.junit.Assert.assertNotSame;
 
 import org.mozc.android.inputmethod.japanese.FeedbackManager.FeedbackEvent;
 import org.mozc.android.inputmethod.japanese.hardwarekeyboard.HardwareKeyboard.CompositionSwitchMode;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.view.DummyDrawable;
 import org.mozc.android.inputmethod.japanese.view.MozcImageView;
 import org.mozc.android.inputmethod.japanese.view.Skin;
@@ -46,7 +46,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 /** Test for narrow frame view. */
-public class NarrowFrameViewTest extends InstrumentationTestCaseWithMock {
+public class NarrowFrameViewTest extends InstrumentationMock {
 
   @SmallTest
   public void testSetEventListener() {

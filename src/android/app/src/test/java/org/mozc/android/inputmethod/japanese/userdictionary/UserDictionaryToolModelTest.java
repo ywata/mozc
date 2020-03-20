@@ -46,7 +46,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoUserDictionaryStorage
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoUserDictionaryStorage.UserDictionaryCommandStatus.Status;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoUserDictionaryStorage.UserDictionaryStorage;
 import org.mozc.android.inputmethod.japanese.session.SessionExecutor;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -71,7 +71,7 @@ import java.util.zip.ZipInputStream;
 
 /**
  */
-public class UserDictionaryToolModelTest extends InstrumentationTestCaseWithMock {
+public class UserDictionaryToolModelTest extends InstrumentationMock {
   @SmallTest
   public void testCreateSession() {
     SessionExecutor executor = createMock(SessionExecutor.class);

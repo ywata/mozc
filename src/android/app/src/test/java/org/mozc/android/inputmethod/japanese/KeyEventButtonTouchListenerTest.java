@@ -44,7 +44,7 @@ import org.mozc.android.inputmethod.japanese.keyboard.KeyState.MetaState;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyboardActionListener;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchAction;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchEvent;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import android.content.Context;
 import android.os.Looper;
@@ -61,7 +61,7 @@ import java.util.Set;
 
 /**
  */
-public class KeyEventButtonTouchListenerTest extends InstrumentationTestCaseWithMock {
+public class KeyEventButtonTouchListenerTest extends InstrumentationMock {
   private KeyEventHandler createKeyEventHandlerMock() {
     KeyboardActionListener keyboardActionListener = createMock(KeyboardActionListener.class);
     return createMockBuilder(KeyEventHandler.class)

@@ -35,7 +35,7 @@ import org.mozc.android.inputmethod.japanese.keyboard.Key.Stick;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyState.MetaState;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchAction;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchEvent;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import com.google.common.base.Optional;
 
 import android.os.Handler;
@@ -50,7 +50,7 @@ import static org.junit.Assert.assertTrue;
 
 /**
  */
-public class KeyEventHandlerTest extends InstrumentationTestCaseWithMock {
+public class KeyEventHandlerTest extends InstrumentationMock {
 
   private static Key createDummyKey(int keyCode, int longPressKeyCode, boolean isRepeatable) {
     KeyEntity keyEntity = new KeyEntity(

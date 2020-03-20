@@ -36,7 +36,7 @@ import static org.easymock.EasyMock.same;
 import static org.junit.Assert.assertEquals;
 
 import org.mozc.android.inputmethod.japanese.R;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.ui.MenuDialog.MenuDialogListener;
 import org.mozc.android.inputmethod.japanese.ui.MenuDialog.MenuDialogListenerHandler;
 import com.google.common.base.Optional;
@@ -57,7 +57,7 @@ import java.util.List;
  * Test for MenuDialog.
  *
  */
-public class MenuDialogTest extends InstrumentationTestCaseWithMock{
+public class MenuDialogTest extends InstrumentationMock {
   @Override
   protected void setUp() throws Exception {
     super.setUp();

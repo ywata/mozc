@@ -39,8 +39,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchEvent;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.KeyEvent.ProbableKeyEvent;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.KeyEvent.SpecialKey;
-import org.mozc.android.inputmethod.japanese.R;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -59,7 +58,7 @@ import java.util.List;
  *
  * TODO(matsuzakit): Move to util package.
  */
-public class PrimaryKeyCodeConverterTest extends InstrumentationTestCaseWithMock {
+public class PrimaryKeyCodeConverterTest extends InstrumentationMock {
 
   @SmallTest
   public void testCreateKeyEventForInvalidKeyCode() {

@@ -32,7 +32,7 @@ package org.mozc.android.inputmethod.japanese.view;
 import static org.easymock.EasyMock.expect;
 import static org.junit.Assert.assertSame;
 
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -43,7 +43,7 @@ import androidx.test.filters.SmallTest;
 
 /**
  */
-public class DrawableCacheTest extends InstrumentationTestCaseWithMock {
+public class DrawableCacheTest extends InstrumentationMock {
 
   private class TestDrawable extends ColorDrawable {
     public TestDrawable() {

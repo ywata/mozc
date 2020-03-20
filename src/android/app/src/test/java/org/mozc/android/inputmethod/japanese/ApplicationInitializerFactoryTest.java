@@ -34,7 +34,7 @@ import org.mozc.android.inputmethod.japanese.ApplicationInitializerFactory.Appli
 import org.mozc.android.inputmethod.japanese.MozcUtil.TelephonyManagerInterface;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil.PreferenceManagerStaticInterface;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MockContext;
 import org.mozc.android.inputmethod.japanese.testing.MockPackageManager;
 import org.mozc.android.inputmethod.japanese.testing.MozcPreferenceUtil;
@@ -57,7 +57,7 @@ import static org.junit.Assert.*;
 /**
  * Test for {@link ApplicationInitializerFactory}.
  */
-public class ApplicationInitializerFactoryTest extends InstrumentationTestCaseWithMock {
+public class ApplicationInitializerFactoryTest extends InstrumentationMock {
 
   @Override
   protected void setUp() throws Exception {

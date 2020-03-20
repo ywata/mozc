@@ -37,7 +37,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import com.google.common.base.Optional;
 
 import androidx.core.view.accessibility.AccessibilityEventCompat;
@@ -49,7 +49,7 @@ import android.view.View;
 /**
  * Test for CandidateWindowAccessibilityDelegate.
  */
-public class CandidateWindowAccessibilityDelegateTest extends InstrumentationTestCaseWithMock {
+public class CandidateWindowAccessibilityDelegateTest extends InstrumentationMock {
 
   @Override
   protected void setUp() throws Exception {

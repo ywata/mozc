@@ -29,7 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese.model;
 
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import androidx.test.filters.SmallTest;
 
@@ -38,7 +38,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Tests for SymbolMajorCategory.
  */
-public class SymbolMajorCategoryTest extends InstrumentationTestCaseWithMock {
+public class SymbolMajorCategoryTest extends InstrumentationMock {
 
   @SmallTest
   public void testGetMajorCategory() {

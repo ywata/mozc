@@ -40,7 +40,7 @@ import org.mozc.android.inputmethod.japanese.model.SymbolCandidateStorage;
 import org.mozc.android.inputmethod.japanese.model.SymbolCandidateStorage.SymbolHistoryStorage;
 import org.mozc.android.inputmethod.japanese.model.SymbolMajorCategory;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
 
@@ -54,7 +54,7 @@ import java.util.Collections;
 
 /**
  */
-public class SymbolInputViewTest extends InstrumentationTestCaseWithMock {
+public class SymbolInputViewTest extends InstrumentationMock {
   // TODO(hidehiko): Add tests for switchToPreviousCandidateView for b/5772179, as it's much
   //   difficult to test the method, and now we don't have the test for it.
   //   Refactoring, which I'm working on, would make it possible,

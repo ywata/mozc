@@ -40,7 +40,7 @@ import org.mozc.android.inputmethod.japanese.CandidateWordView.Orientation;
 import org.mozc.android.inputmethod.japanese.CandidateWordView.OrientationTrait;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateList;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MozcLayoutUtil;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.testing.VisibilityProxy;
@@ -67,7 +67,7 @@ import java.util.List;
 
 /**
  */
-public class CandidateWordViewTest extends InstrumentationTestCaseWithMock {
+public class CandidateWordViewTest extends InstrumentationMock {
   class StubCandidateWordView extends CandidateWordView {
     StubCandidateWordView(Context context, OrientationTrait orientationTrait) {
       super(context, orientationTrait);

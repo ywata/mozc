@@ -35,7 +35,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.mozc.android.inputmethod.japanese.model.FloatingModeIndicatorController.ControllerListener;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.CompositionMode;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import androidx.test.filters.SmallTest;
 import android.view.inputmethod.EditorInfo;
@@ -43,7 +43,7 @@ import android.view.inputmethod.EditorInfo;
 /**
  * Test for FloatingModeIndicatorController.
  */
-public class FloatingModeIndicatorControllerTest extends InstrumentationTestCaseWithMock {
+public class FloatingModeIndicatorControllerTest extends InstrumentationMock {
 
   private FloatingModeIndicatorController createAndInitializeControllerWithMockListener(
       long time, ControllerListener mockListener) {

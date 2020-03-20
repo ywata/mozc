@@ -37,7 +37,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Command;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Output;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Preedit;
 import org.mozc.android.inputmethod.japanese.testing.ApiLevel;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.ui.FloatingCandidateLayoutRenderer;
 import org.mozc.android.inputmethod.japanese.ui.FloatingModeIndicator;
@@ -64,7 +64,7 @@ import static org.junit.Assert.*;
  */
 @ApiLevel(21)
 @TargetApi(21)
-public class FloatingCandidateViewTest extends InstrumentationTestCaseWithMock {
+public class FloatingCandidateViewTest extends InstrumentationMock {
 
   private class FloatingCandidateLayoutRendererMock extends FloatingCandidateLayoutRenderer {
 

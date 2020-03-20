@@ -35,7 +35,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard.KeyboardSpecification;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Request;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -51,7 +51,7 @@ import android.view.inputmethod.EditorInfo;
 
 /**
  */
-public class MozcUtilTest extends InstrumentationTestCaseWithMock {
+public class MozcUtilTest extends InstrumentationMock {
 
   @Override
   protected void setUp() throws Exception {

@@ -35,7 +35,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Candidates
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Candidates.Candidate;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Command;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Output;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
@@ -49,7 +49,7 @@ import static org.junit.Assert.*;
 /**
  * Test for FloatingCandidateLayoutRenderer.
  */
-public class FloatingCandidateLayoutRendererTest extends InstrumentationTestCaseWithMock {
+public class FloatingCandidateLayoutRendererTest extends InstrumentationMock {
 
   private Command generateCommandsProto(int candidatesNum) {
     Preconditions.checkArgument(0 <= candidatesNum && candidatesNum < 10);

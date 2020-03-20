@@ -34,7 +34,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.mozc.android.inputmethod.japanese.MozcUtil.TelephonyManagerInterface;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MozcPreferenceUtil;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 
@@ -44,7 +44,7 @@ import androidx.test.filters.SmallTest;
 
 /**
  */
-public class EmojiProviderTypeTest extends InstrumentationTestCaseWithMock {
+public class EmojiProviderTypeTest extends InstrumentationMock {
 
   /**
    * @return mock manager

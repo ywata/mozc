@@ -36,7 +36,7 @@ import static org.easymock.EasyMock.isA;
 import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.keyboard.BackgroundDrawableFactory.DrawableType;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MozcMatcher.DeepCopyPaintCapture;
 import org.mozc.android.inputmethod.japanese.testing.VisibilityProxy;
 import org.mozc.android.inputmethod.japanese.vectorgraphic.BufferedDrawable;
@@ -61,7 +61,7 @@ import java.lang.reflect.InvocationTargetException;
 
 /**
  */
-public class BackgroundDrawableFactoryTest extends InstrumentationTestCaseWithMock {
+public class BackgroundDrawableFactoryTest extends InstrumentationMock {
   private BackgroundDrawableFactory factory;
 
   @Override

@@ -36,7 +36,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.mozc.android.inputmethod.japanese.MozcLog;
 import org.mozc.android.inputmethod.japanese.R;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 
 import android.content.Context;
@@ -59,7 +59,7 @@ import java.util.List;
 /**
  * Test for {@link MiniBrowserActivity}.
  */
-public class MiniBrowserActivityTest extends InstrumentationTestCaseWithMock {
+public class MiniBrowserActivityTest extends InstrumentationMock {
 
   @SmallTest
   @UiThreadTest

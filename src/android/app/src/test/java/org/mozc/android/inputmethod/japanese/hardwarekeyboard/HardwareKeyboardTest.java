@@ -32,7 +32,7 @@ package org.mozc.android.inputmethod.japanese.hardwarekeyboard;
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard.KeyboardSpecification;
 import org.mozc.android.inputmethod.japanese.preference.ClientSidePreference.HardwareKeyMap;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.CompositionMode;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import androidx.test.filters.SmallTest;
 import android.view.KeyEvent;
@@ -41,7 +41,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  */
-public class HardwareKeyboardTest extends InstrumentationTestCaseWithMock {
+public class HardwareKeyboardTest extends InstrumentationMock {
 
   @SmallTest
   public void testDefaultKeyboard() {

@@ -33,7 +33,7 @@ import static org.easymock.EasyMock.expect;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 
 import androidx.test.filters.SmallTest;
@@ -42,7 +42,7 @@ import org.easymock.IAnswer;
 
 /**
  */
-public class SnapScrollerTest extends InstrumentationTestCaseWithMock {
+public class SnapScrollerTest extends InstrumentationMock {
   @SmallTest
   public void testScrollTo() {
     class TestData extends Parameter {

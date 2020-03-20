@@ -83,7 +83,7 @@ import org.mozc.android.inputmethod.japanese.session.SessionExecutor;
 import org.mozc.android.inputmethod.japanese.session.SessionExecutor.EvaluationCallback;
 import org.mozc.android.inputmethod.japanese.session.SessionHandlerFactory;
 import org.mozc.android.inputmethod.japanese.testing.ApiLevel;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.ui.MenuDialog.MenuDialogListener;
 import org.mozc.android.inputmethod.japanese.util.ImeSwitcherFactory.ImeSwitcher;
@@ -130,7 +130,7 @@ import java.util.List;
  * TODO(hidehiko): Remove the hack, after switching.
  *
  */
-public class MozcBaseServiceTest extends InstrumentationTestCaseWithMock {
+public class MozcBaseServiceTest extends InstrumentationMock {
 
   /**
    * Store registered listeners to unregister them on {@code clearSharedPreferences}.

@@ -37,7 +37,7 @@ import org.mozc.android.inputmethod.japanese.preference.ClientSidePreference.Key
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil.CurrentKeyboardLayoutPreferenceChangeListener;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil.PreferenceManagerInterface;
 import org.mozc.android.inputmethod.japanese.R;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
 
@@ -58,7 +58,7 @@ import android.util.Xml;
 
 /**
  */
-public class PreferenceUtilTest extends InstrumentationTestCaseWithMock {
+public class PreferenceUtilTest extends InstrumentationMock {
 
   @Override
   protected void tearDown() throws Exception {

@@ -46,7 +46,7 @@ import org.mozc.android.inputmethod.japanese.keyboard.KeyEntity;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyState;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyState.MetaState;
 import org.mozc.android.inputmethod.japanese.keyboard.PopUp;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import com.google.common.base.Optional;
 
 import android.content.Context;
@@ -62,7 +62,7 @@ import java.util.List;
 /**
  * Test for KeyboardAccessibilityDelegate.
  */
-public class KeyboardAccessibilityDelegateTest extends InstrumentationTestCaseWithMock {
+public class KeyboardAccessibilityDelegateTest extends InstrumentationMock {
 
   private static final int SOURCE_ID = 10;
   private static final int KEY_CODE = 11;

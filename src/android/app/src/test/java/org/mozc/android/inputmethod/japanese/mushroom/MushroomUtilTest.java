@@ -34,7 +34,7 @@ import static org.easymock.EasyMock.eq;
 import static org.easymock.EasyMock.expect;
 import static org.junit.Assert.*;
 
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -48,7 +48,7 @@ import java.util.List;
 
 /**
  */
-public class MushroomUtilTest extends InstrumentationTestCaseWithMock {
+public class MushroomUtilTest extends InstrumentationMock {
   public void testGetMushroomApplicationList() {
     PackageManager manager = createMock(MockPackageManager.class);
     Capture<Intent> intentCapture = new Capture<Intent>();

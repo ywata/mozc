@@ -36,7 +36,7 @@ import org.mozc.android.inputmethod.japanese.emoji.EmojiProviderType;
 import org.mozc.android.inputmethod.japanese.model.SymbolCandidateStorage.SymbolHistoryStorage;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateList;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
 
@@ -50,7 +50,7 @@ import java.util.Map;
  * Tests for SymbolCandidateStorage.
  *
  */
-public class SymbolCandidateStorageTest extends InstrumentationTestCaseWithMock {
+public class SymbolCandidateStorageTest extends InstrumentationMock {
 
   @SmallTest
   public void testToCandidateList() {

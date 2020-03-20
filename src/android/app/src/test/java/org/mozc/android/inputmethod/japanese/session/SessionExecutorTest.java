@@ -74,7 +74,7 @@ import org.mozc.android.inputmethod.japanese.session.SessionExecutor.EvaluationC
 import org.mozc.android.inputmethod.japanese.session.SessionExecutor.ExecutorMainCallback;
 import org.mozc.android.inputmethod.japanese.session.SessionExecutor.SynchronousEvaluationContext;
 import org.mozc.android.inputmethod.japanese.stresstest.StressTest;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MemoryLogger;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
@@ -104,7 +104,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  *
  */
-public class SessionExecutorTest extends InstrumentationTestCaseWithMock {
+public class SessionExecutorTest extends InstrumentationMock {
 
   private SessionExecutor createSessionExecutorMock() {
     return createMockBuilder(SessionExecutor.class)

@@ -33,7 +33,7 @@ import static org.easymock.EasyMock.expect;
 import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.R;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.vectorgraphic.BufferedDrawable;
 
 import android.content.res.Resources;
@@ -46,7 +46,7 @@ import androidx.test.filters.SmallTest;
 
 /**
  */
-public class MozcDrawableFactoryTest extends InstrumentationTestCaseWithMock {
+public class MozcDrawableFactoryTest extends InstrumentationMock {
   @SmallTest
   public void testGetDrawableRaw() {
     Resources resources = getInstrumentation().getTargetContext().getResources();

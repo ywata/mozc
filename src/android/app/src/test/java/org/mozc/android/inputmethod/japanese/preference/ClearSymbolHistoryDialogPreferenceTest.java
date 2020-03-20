@@ -32,7 +32,7 @@ package org.mozc.android.inputmethod.japanese.preference;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.GenericStorageEntry.StorageType;
 import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.session.SessionExecutor;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import com.google.common.base.Optional;
 
 import android.content.Context;
@@ -43,7 +43,7 @@ import android.util.Xml;
 
 /**
  */
-public class ClearSymbolHistoryDialogPreferenceTest extends InstrumentationTestCaseWithMock {
+public class ClearSymbolHistoryDialogPreferenceTest extends InstrumentationMock {
 
   private ClearSymbolHistoryDialogPreference preference;
   private SessionExecutor mockSessionExecutor;

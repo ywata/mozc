@@ -41,7 +41,7 @@ import static org.junit.Assert.assertEquals;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Annotation;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateList;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Row;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Span;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayoutRenderer.DescriptionLayoutPolicy;
@@ -62,7 +62,7 @@ import java.util.List;
 
 /**
  */
-public class CandidateLayoutRendererTest extends InstrumentationTestCaseWithMock {
+public class CandidateLayoutRendererTest extends InstrumentationMock {
   public void testDrawCandidateLayout() {
     // Create 5x5 dummy candidate list.
     CandidateList.Builder builder = CandidateList.newBuilder();

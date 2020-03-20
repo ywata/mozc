@@ -36,7 +36,7 @@ import static org.junit.Assert.*;
 import org.mozc.android.inputmethod.japanese.DependencyFactory.Dependency;
 import org.mozc.android.inputmethod.japanese.model.SymbolCandidateStorage.SymbolHistoryStorage;
 import org.mozc.android.inputmethod.japanese.mushroom.MushroomUtil;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.ui.MenuDialog.MenuDialogListener;
 import org.mozc.android.inputmethod.japanese.util.ImeSwitcherFactory.ImeSwitcher;
 import com.google.common.base.Optional;
@@ -57,7 +57,7 @@ import org.easymock.Capture;
  * Test for MozcMenuDialogListenerImpl.
  *
  */
-public class MozcMenuDialogListenerImplTest extends InstrumentationTestCaseWithMock {
+public class MozcMenuDialogListenerImplTest extends InstrumentationMock {
   private Context context;
   private InputMethodService inputMethodService;
   private ViewEventListener eventListener;

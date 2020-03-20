@@ -36,7 +36,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoUserDictionaryStorage
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoUserDictionaryStorage.UserDictionaryCommandStatus;
 import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.session.SessionExecutor;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import com.google.common.base.Optional;
 
 import android.content.Context;
@@ -47,7 +47,7 @@ import android.util.Xml;
 
 /**
  */
-public class ClearUserDictionaryDialogPreferenceTest extends InstrumentationTestCaseWithMock {
+public class ClearUserDictionaryDialogPreferenceTest extends InstrumentationMock {
 
   private ClearUserDictionaryDialogPreference preference;
   private SessionExecutor mockSessionExecutor;

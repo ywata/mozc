@@ -39,7 +39,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateW
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Command;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Output;
 import org.mozc.android.inputmethod.japanese.testing.ApiLevel;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.util.CursorAnchorInfoWrapper;
 import org.mozc.android.inputmethod.japanese.view.Skin;
 import com.google.common.base.Optional;
@@ -53,7 +53,7 @@ import android.view.inputmethod.EditorInfo;
 /**
  * Test for CandidateViewManager.
  */
-public class CandidateViewManagerTest extends InstrumentationTestCaseWithMock {
+public class CandidateViewManagerTest extends InstrumentationMock {
 
   private Command createCommand(int candidateNum) {
     CandidateList.Builder candidateListBuilder = CandidateList.newBuilder();

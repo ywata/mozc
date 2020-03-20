@@ -48,7 +48,7 @@ import org.easymock.IMocksControl;
  * which has EasyMockSupport and exposes its methods as composition pattern.
  *
  */
-public class InstrumentationTestCaseWithMock extends InstrumentationTestCase {
+public class InstrumentationMock extends InstrumentationTestCase {
   private EasyMockSupport mockSupport;
   private InstrumentationMockUtil mockUtil;
 

@@ -38,7 +38,7 @@ import static org.junit.Assert.*;
 import org.mozc.android.inputmethod.japanese.keyboard.BackgroundDrawableFactory.DrawableType;
 import org.mozc.android.inputmethod.japanese.keyboard.Key.Stick;
 import org.mozc.android.inputmethod.japanese.R;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MockResourcesWithDisplayMetrics;
 import org.mozc.android.inputmethod.japanese.view.DrawableCache;
 import com.google.common.base.Optional;
@@ -57,7 +57,7 @@ import java.util.Collections;
 
 /**
  */
-public class PopUpPreviewTest extends InstrumentationTestCaseWithMock {
+public class PopUpPreviewTest extends InstrumentationMock {
 
   @SmallTest
   public void testShow() {

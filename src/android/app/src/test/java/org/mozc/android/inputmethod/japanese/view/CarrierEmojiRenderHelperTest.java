@@ -39,7 +39,7 @@ import org.mozc.android.inputmethod.japanese.emoji.EmojiProviderType;
 import org.mozc.android.inputmethod.japanese.emoji.EmojiUtil;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateList;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.view.CarrierEmojiRenderHelper.BackgroundTextView;
 import com.google.common.base.Optional;
 
@@ -55,7 +55,7 @@ import java.util.Set;
 
 /**
  */
-public class CarrierEmojiRenderHelperTest extends InstrumentationTestCaseWithMock {
+public class CarrierEmojiRenderHelperTest extends InstrumentationMock {
 
   private static final int CODE_POINT_IMODE = 0xFEE10;
   private static final int CODE_POINT_EZMARK = 0xFEE40;

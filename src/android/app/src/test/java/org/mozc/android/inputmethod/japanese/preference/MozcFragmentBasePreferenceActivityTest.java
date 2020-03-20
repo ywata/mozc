@@ -29,7 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese.preference;
 
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,7 +40,7 @@ import static org.junit.Assert.*;
 
 /**
  */
-public class MozcFragmentBasePreferenceActivityTest extends InstrumentationTestCaseWithMock {
+public class MozcFragmentBasePreferenceActivityTest extends InstrumentationMock {
 
   @SmallTest
   public void testMaybeCreateRedirectingIntent() {

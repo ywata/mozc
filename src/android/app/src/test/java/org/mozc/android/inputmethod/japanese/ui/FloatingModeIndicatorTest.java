@@ -37,7 +37,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Preedit;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Preedit.Segment;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.SessionCommand;
 import org.mozc.android.inputmethod.japanese.testing.ApiLevel;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import android.annotation.TargetApi;
 import android.os.Handler;
@@ -53,7 +53,7 @@ import static org.junit.Assert.*;
  */
 @ApiLevel(21)
 @TargetApi(21)
-public class FloatingModeIndicatorTest extends InstrumentationTestCaseWithMock {
+public class FloatingModeIndicatorTest extends InstrumentationMock {
 
   private final Command emptyCommand = Command.getDefaultInstance();
   private final Command nonEmptyCommand = Command.newBuilder()

@@ -76,8 +76,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchE
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.KeyEvent.ProbableKeyEvent;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.KeyEvent.SpecialKey;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Output;
-import org.mozc.android.inputmethod.japanese.R;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MockWindow;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.ui.MenuDialog;
@@ -117,7 +116,7 @@ import java.util.Map;
 
 /**
  */
-public class ViewManagerTest extends InstrumentationTestCaseWithMock {
+public class ViewManagerTest extends InstrumentationMock {
 
   private ViewManager createViewManager(Context context) {
     return createViewManagerWithEventListener(context, createNiceMock(ViewEventListener.class));

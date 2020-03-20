@@ -44,7 +44,7 @@ import org.mozc.android.inputmethod.japanese.keyboard.KeyState.MetaState;
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard.KeyboardSpecification;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchAction;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchEvent;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MockResourcesWithDisplayMetrics;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.testing.VisibilityProxy;
@@ -79,7 +79,7 @@ import java.util.Set;
 /**
  * Unit tests for {@code org.mozc.android.inputmethod.japanese.keyboard.KeyboardView}.
  */
-public class KeyboardViewTest extends InstrumentationTestCaseWithMock {
+public class KeyboardViewTest extends InstrumentationMock {
 
   /**
    * The number of steps of a drag path.

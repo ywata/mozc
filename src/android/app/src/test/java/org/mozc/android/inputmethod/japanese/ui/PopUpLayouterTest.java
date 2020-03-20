@@ -37,7 +37,7 @@ import static org.easymock.EasyMock.getCurrentArguments;
 import static org.easymock.EasyMock.isA;
 import static org.junit.Assert.assertEquals;
 
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import android.content.Context;
 import androidx.test.filters.SmallTest;
@@ -50,7 +50,7 @@ import org.easymock.IAnswer;
 /**
  * Test for PopUpLayouter class.
  */
-public class PopUpLayouterTest extends InstrumentationTestCaseWithMock {
+public class PopUpLayouterTest extends InstrumentationMock {
 
   @SmallTest
   public void testBasicLayout() {

@@ -31,7 +31,7 @@ package org.mozc.android.inputmethod.japanese.preference;
 
 import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.session.SessionExecutor;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import com.google.common.base.Optional;
 
 import android.content.Context;
@@ -42,7 +42,7 @@ import android.util.Xml;
 
 /**
  */
-public class ClearConversionHistoryDialogPreferenceTest extends InstrumentationTestCaseWithMock {
+public class ClearConversionHistoryDialogPreferenceTest extends InstrumentationMock {
 
   private ClearConversionHistoryDialogPreference preference;
   private SessionExecutor mockSessionExecutor;

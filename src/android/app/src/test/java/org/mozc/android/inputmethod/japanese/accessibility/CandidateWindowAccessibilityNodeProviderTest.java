@@ -36,7 +36,7 @@ import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Annotation;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Row;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Span;
@@ -61,7 +61,7 @@ import java.util.List;
 /**
  * Test for CandidateWindowAccessibilityNodeProvider.
  */
-public class CandidateWindowAccessibilityNodeProviderTest extends InstrumentationTestCaseWithMock {
+public class CandidateWindowAccessibilityNodeProviderTest extends InstrumentationMock {
 
   @Override
   protected void setUp() throws Exception {

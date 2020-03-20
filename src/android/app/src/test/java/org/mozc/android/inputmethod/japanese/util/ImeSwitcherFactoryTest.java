@@ -35,7 +35,7 @@ import static org.easymock.EasyMock.isA;
 import static org.easymock.EasyMock.same;
 import static org.junit.Assert.assertEquals;
 
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.util.ImeSwitcherFactory.ImeSwitcher;
 import org.mozc.android.inputmethod.japanese.util.ImeSwitcherFactory.SubtypeImeSwitcher;
@@ -57,7 +57,7 @@ import java.util.Map;
 
 /**
  */
-public class ImeSwitcherFactoryTest extends InstrumentationTestCaseWithMock {
+public class ImeSwitcherFactoryTest extends InstrumentationMock {
 
   @SmallTest
   public void testIsVoiceImeAvailable() {

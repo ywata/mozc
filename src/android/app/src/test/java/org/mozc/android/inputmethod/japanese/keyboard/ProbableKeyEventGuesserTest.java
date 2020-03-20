@@ -40,7 +40,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchA
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchEvent;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchPosition;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.KeyEvent.ProbableKeyEvent;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
 import com.google.common.collect.Lists;
@@ -69,7 +69,7 @@ import static org.junit.Assert.*;
 
 /**
  */
-public class ProbableKeyEventGuesserTest extends InstrumentationTestCaseWithMock {
+public class ProbableKeyEventGuesserTest extends InstrumentationMock {
 
   private static class BlockingThreadPoolExecutor extends ThreadPoolExecutor {
     public BlockingThreadPoolExecutor() {

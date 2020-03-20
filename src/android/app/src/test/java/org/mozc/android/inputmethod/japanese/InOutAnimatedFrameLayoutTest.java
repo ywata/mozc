@@ -30,7 +30,7 @@
 package org.mozc.android.inputmethod.japanese;
 
 import org.mozc.android.inputmethod.japanese.InOutAnimatedFrameLayout.VisibilityChangeListener;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 
 import androidx.test.filters.SmallTest;
@@ -42,7 +42,7 @@ import static org.junit.Assert.*;
 
 /**
  */
-public class InOutAnimatedFrameLayoutTest extends InstrumentationTestCaseWithMock {
+public class InOutAnimatedFrameLayoutTest extends InstrumentationMock {
   private static class TestData extends Parameter {
     final Animation animation;
     final int visibility;

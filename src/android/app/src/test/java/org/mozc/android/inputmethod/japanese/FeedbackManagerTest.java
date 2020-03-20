@@ -31,13 +31,13 @@ package org.mozc.android.inputmethod.japanese;
 
 import org.mozc.android.inputmethod.japanese.FeedbackManager.FeedbackEvent;
 import org.mozc.android.inputmethod.japanese.FeedbackManager.FeedbackListener;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 
 import androidx.test.filters.SmallTest;
 
 /**
  */
-public class FeedbackManagerTest extends InstrumentationTestCaseWithMock {
+public class FeedbackManagerTest extends InstrumentationMock {
   @SmallTest
   public void testFireFeedback() {
     FeedbackListener listener = createMock(FeedbackListener.class);

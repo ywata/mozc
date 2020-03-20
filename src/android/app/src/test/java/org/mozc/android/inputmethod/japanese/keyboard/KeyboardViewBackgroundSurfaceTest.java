@@ -39,7 +39,7 @@ import org.mozc.android.inputmethod.japanese.keyboard.Key.Stick;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyState.MetaState;
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard.KeyboardSpecification;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyboardViewBackgroundSurface.SurfaceCanvas;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import org.mozc.android.inputmethod.japanese.testing.MockResourcesWithDisplayMetrics;
 import org.mozc.android.inputmethod.japanese.view.DrawableCache;
 import com.google.common.base.Optional;
@@ -59,7 +59,7 @@ import java.util.EnumSet;
 
 /**
  */
-public class KeyboardViewBackgroundSurfaceTest extends InstrumentationTestCaseWithMock {
+public class KeyboardViewBackgroundSurfaceTest extends InstrumentationMock {
 
   private static final int WIDTH = 50;
   private static final int HEIGHT = 30;

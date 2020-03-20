@@ -46,7 +46,7 @@ import org.mozc.android.inputmethod.japanese.keyboard.Keyboard;
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard.KeyboardSpecification;
 import org.mozc.android.inputmethod.japanese.keyboard.PopUp;
 import org.mozc.android.inputmethod.japanese.keyboard.Row;
-import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
+import org.mozc.android.inputmethod.japanese.testing.InstrumentationMock;
 import com.google.common.base.Optional;
 
 import android.content.Context;
@@ -69,7 +69,7 @@ import java.util.List;
 /**
  * Test for KeyboardAccessibilityNodeProvider.
  */
-public class KeyboardAccessibilityNodeProviderTest extends InstrumentationTestCaseWithMock {
+public class KeyboardAccessibilityNodeProviderTest extends InstrumentationMock {
 
   private static final int SOURCE_ID_UNMODIFIED = 1;
   private static final int SOURCE_ID_SHIFTED = 2;
