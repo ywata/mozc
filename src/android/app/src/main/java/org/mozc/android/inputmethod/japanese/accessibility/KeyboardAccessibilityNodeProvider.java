@@ -44,11 +44,11 @@ import com.google.common.base.Preconditions;
 import android.content.Context;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.accessibility.AccessibilityEventCompat;
-import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
-import android.support.v4.view.accessibility.AccessibilityNodeProviderCompat;
-import android.support.v4.view.accessibility.AccessibilityRecordCompat;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.accessibility.AccessibilityEventCompat;
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
+import androidx.core.view.accessibility.AccessibilityNodeProviderCompat;
+import androidx.core.view.accessibility.AccessibilityRecordCompat;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 

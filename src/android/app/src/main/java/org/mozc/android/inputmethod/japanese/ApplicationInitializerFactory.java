@@ -33,22 +33,17 @@ import org.mozc.android.inputmethod.japanese.MozcUtil.TelephonyManagerInterface;
 import org.mozc.android.inputmethod.japanese.emoji.EmojiProviderType;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil.PreferenceManagerStaticInterface;
-import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.util.LauncherIconManagerFactory.LauncherIconManager;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.Build;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
 import android.util.DisplayMetrics;
 
 import java.io.File;
