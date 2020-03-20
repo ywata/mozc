@@ -34,6 +34,7 @@ import static org.easymock.EasyMock.eq;
 import static org.easymock.EasyMock.expectLastCall;
 import static org.easymock.EasyMock.isA;
 import static org.easymock.EasyMock.same;
+import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.MozcUtil;
 import org.mozc.android.inputmethod.japanese.keyboard.BackgroundDrawableFactory.DrawableType;

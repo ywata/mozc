@@ -36,6 +36,7 @@ import static org.easymock.EasyMock.getCurrentArguments;
 import static org.easymock.EasyMock.isA;
 import static org.easymock.EasyMock.leq;
 import static org.easymock.EasyMock.same;
+import static org.junit.Assert.assertEquals;
 
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Annotation;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateList;

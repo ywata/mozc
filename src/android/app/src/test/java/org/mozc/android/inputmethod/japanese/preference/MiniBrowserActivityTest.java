@@ -32,6 +32,7 @@ package org.mozc.android.inputmethod.japanese.preference;
 import static org.easymock.EasyMock.capture;
 import static org.easymock.EasyMock.eq;
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.assertEquals;
 
 import org.mozc.android.inputmethod.japanese.MozcLog;
 import org.mozc.android.inputmethod.japanese.R;

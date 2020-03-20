@@ -45,6 +45,9 @@ import androidx.test.filters.SmallTest;
 
 import java.util.Collections;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 /**
  */
 public class KeyEventHandlerTest extends InstrumentationTestCaseWithMock {

@@ -32,6 +32,7 @@ package org.mozc.android.inputmethod.japanese.mushroom;
 import static org.easymock.EasyMock.capture;
 import static org.easymock.EasyMock.eq;
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 

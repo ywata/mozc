@@ -30,6 +30,8 @@
 package org.mozc.android.inputmethod.japanese.keyboard;
 
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertSame;
 
 import org.mozc.android.inputmethod.japanese.keyboard.BackgroundDrawableFactory.DrawableType;
 import org.mozc.android.inputmethod.japanese.keyboard.Flick.Direction;

@@ -30,6 +30,8 @@
 package org.mozc.android.inputmethod.japanese;
 
 import static org.easymock.EasyMock.isA;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.mozc.android.inputmethod.japanese.CandidateViewManager.KeyboardCandidateViewHeightListener;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateList;
@@ -72,7 +74,6 @@ public class CandidateViewManagerTest extends InstrumentationTestCaseWithMock {
     FloatingCandidateView floatingCandidateView = createViewMock(FloatingCandidateView.class);
     CandidateViewManager candidateViewManager =
         new CandidateViewManager(keyboardCandidateView, floatingCandidateView);
-
     assertFalse(candidateViewManager.isFloatingMode());
 
     {

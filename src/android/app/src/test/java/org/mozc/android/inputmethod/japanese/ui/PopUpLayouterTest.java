@@ -35,6 +35,7 @@ import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.expectLastCall;
 import static org.easymock.EasyMock.getCurrentArguments;
 import static org.easymock.EasyMock.isA;
+import static org.junit.Assert.assertEquals;
 
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 

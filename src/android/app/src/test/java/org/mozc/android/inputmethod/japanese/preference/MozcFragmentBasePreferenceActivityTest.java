@@ -36,6 +36,8 @@ import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import androidx.test.filters.SmallTest;
 
+import static org.junit.Assert.*;
+
 /**
  */
 public class MozcFragmentBasePreferenceActivityTest extends InstrumentationTestCaseWithMock {

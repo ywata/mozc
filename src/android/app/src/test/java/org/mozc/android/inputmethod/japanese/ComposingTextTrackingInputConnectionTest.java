@@ -30,9 +30,11 @@
 package org.mozc.android.inputmethod.japanese;
 
 import static android.test.MoreAsserts.assertAssignableFrom;
+import static junit.framework.TestCase.assertEquals;
 import static org.easymock.EasyMock.eq;
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.same;
+import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 

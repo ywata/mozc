@@ -33,6 +33,7 @@ import static org.easymock.EasyMock.eq;
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.notNull;
 import static org.easymock.EasyMock.same;
+import static org.junit.Assert.assertEquals;
 
 import org.mozc.android.inputmethod.japanese.R;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;

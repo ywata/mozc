@@ -30,6 +30,8 @@
 package org.mozc.android.inputmethod.japanese.model;
 
 import static org.easymock.EasyMock.isA;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.mozc.android.inputmethod.japanese.model.FloatingModeIndicatorController.ControllerListener;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.CompositionMode;

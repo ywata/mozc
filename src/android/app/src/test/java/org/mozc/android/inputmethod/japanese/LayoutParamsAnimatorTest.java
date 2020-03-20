@@ -39,6 +39,9 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.LinearInterpolator;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 /**
  */
 public class LayoutParamsAnimatorTest extends InstrumentationTestCase {

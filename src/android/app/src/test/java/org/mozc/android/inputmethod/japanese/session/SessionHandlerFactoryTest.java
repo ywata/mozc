@@ -39,6 +39,8 @@ import androidx.test.filters.SmallTest;
 import java.io.IOException;
 import java.net.ServerSocket;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  */
 public class SessionHandlerFactoryTest extends InstrumentationTestCase {

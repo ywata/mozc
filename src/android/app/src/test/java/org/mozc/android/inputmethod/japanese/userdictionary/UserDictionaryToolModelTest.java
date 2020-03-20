@@ -32,6 +32,8 @@ package org.mozc.android.inputmethod.japanese.userdictionary;
 import static android.test.MoreAsserts.assertContentsInOrder;
 import static android.test.MoreAsserts.assertEmpty;
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.*;
+import static org.junit.runners.model.MultipleFailureException.assertEmpty;
 
 import org.mozc.android.inputmethod.japanese.MozcUtil;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoUserDictionaryStorage.UserDictionary;

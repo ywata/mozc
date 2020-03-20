@@ -37,6 +37,8 @@ import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWith
 import androidx.test.filters.SmallTest;
 import android.view.KeyEvent;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  */
 public class HardwareKeyboardTest extends InstrumentationTestCaseWithMock {

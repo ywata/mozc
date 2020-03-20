@@ -32,6 +32,7 @@ package org.mozc.android.inputmethod.japanese.accessibility;
 import static org.easymock.EasyMock.anyObject;
 import static org.easymock.EasyMock.capture;
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.keyboard.BackgroundDrawableFactory.DrawableType;
 import org.mozc.android.inputmethod.japanese.keyboard.Flick;

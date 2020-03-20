@@ -57,6 +57,8 @@ import android.view.inputmethod.CursorAnchorInfo;
 import android.view.inputmethod.EditorInfo;
 import android.widget.PopupWindow;
 
+import static org.junit.Assert.*;
+
 /**
  * Test for FloatingCandidateView.
  */

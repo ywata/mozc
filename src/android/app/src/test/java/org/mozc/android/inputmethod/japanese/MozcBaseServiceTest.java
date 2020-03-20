@@ -29,6 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese;
 
+import static org.junit.Assert.*;
 import static org.mozc.android.inputmethod.japanese.testing.MozcMatcher.matchesKeyEvent;
 import static org.mozc.android.inputmethod.japanese.testing.MozcMatcher.sameOptional;
 import static org.easymock.EasyMock.anyBoolean;

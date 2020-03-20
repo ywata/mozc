@@ -45,6 +45,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 /**
  */
 public class KeyboardParserTest extends InstrumentationTestCase {
@@ -63,6 +66,7 @@ public class KeyboardParserTest extends InstrumentationTestCase {
     TypedValue value = new TypedValue();
 
     // If the value is null, default value should be returned.
+
     assertEquals(10, KeyboardParser.getDimensionOrFraction(
         Optional.<TypedValue>absent(), 500, 10, metrics));
     assertEquals(30, KeyboardParser.getDimensionOrFraction(

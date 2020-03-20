@@ -33,6 +33,8 @@ import android.os.Bundle;
 import android.test.InstrumentationTestCase;
 import androidx.test.filters.SmallTest;
 
+import static org.junit.Assert.*;
+
 /**
  * TODO(matsuzakit): Test #addPreferences method.
  * Currently it is skipped because partial mock is not available

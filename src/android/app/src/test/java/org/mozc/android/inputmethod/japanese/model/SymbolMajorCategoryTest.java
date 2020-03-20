@@ -33,6 +33,8 @@ import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWith
 
 import androidx.test.filters.SmallTest;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Tests for SymbolMajorCategory.
  */

@@ -38,6 +38,8 @@ import androidx.test.filters.SmallTest;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Teset for CandidateDescriptionUtil class.
  */

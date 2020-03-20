@@ -53,6 +53,8 @@ import android.view.KeyEvent;
 
 import java.util.Collections;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * The focus of this test is to check the event flow from h/w key event,
  * MozcService, (real) SessionExecutor to MozcService.

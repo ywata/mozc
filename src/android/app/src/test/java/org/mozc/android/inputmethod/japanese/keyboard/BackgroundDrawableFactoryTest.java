@@ -33,6 +33,7 @@ import static org.easymock.EasyMock.capture;
 import static org.easymock.EasyMock.geq;
 import static org.easymock.EasyMock.gt;
 import static org.easymock.EasyMock.isA;
+import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.keyboard.BackgroundDrawableFactory.DrawableType;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;

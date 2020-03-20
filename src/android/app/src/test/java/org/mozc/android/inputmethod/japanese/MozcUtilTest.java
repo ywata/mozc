@@ -30,6 +30,8 @@
 package org.mozc.android.inputmethod.japanese;
 
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard.KeyboardSpecification;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Request;

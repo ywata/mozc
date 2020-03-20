@@ -29,6 +29,8 @@
 
 package org.mozc.android.inputmethod.japanese.session;
 
+import static junit.framework.TestCase.assertSame;
+import static org.junit.Assert.*;
 import static org.mozc.android.inputmethod.japanese.testing.MozcMatcher.matchesBuilder;
 import static org.mozc.android.inputmethod.japanese.testing.MozcMatcher.sameOptional;
 import static org.easymock.EasyMock.anyLong;

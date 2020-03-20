@@ -30,6 +30,7 @@
 package org.mozc.android.inputmethod.japanese.emoji;
 
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.assertEquals;
 
 import org.mozc.android.inputmethod.japanese.MozcUtil.TelephonyManagerInterface;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil;

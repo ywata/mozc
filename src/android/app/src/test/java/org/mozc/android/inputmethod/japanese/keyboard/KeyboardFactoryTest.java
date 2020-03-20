@@ -35,6 +35,8 @@ import android.content.res.Resources;
 import android.graphics.Rect;
 import android.test.InstrumentationTestCase;
 
+import static org.junit.Assert.*;
+
 /**
  */
 public class KeyboardFactoryTest extends InstrumentationTestCase {

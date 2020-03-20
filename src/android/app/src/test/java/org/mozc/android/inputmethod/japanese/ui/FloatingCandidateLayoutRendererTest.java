@@ -44,6 +44,8 @@ import android.graphics.Rect;
 import androidx.test.filters.SmallTest;
 import android.view.MotionEvent;
 
+import static org.junit.Assert.*;
+
 /**
  * Test for FloatingCandidateLayoutRenderer.
  */

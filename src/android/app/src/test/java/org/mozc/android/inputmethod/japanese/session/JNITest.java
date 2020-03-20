@@ -42,6 +42,8 @@ import androidx.test.filters.SmallTest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  */
 public class JNITest extends InstrumentationTestCase {

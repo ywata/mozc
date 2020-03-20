@@ -52,6 +52,8 @@ import android.util.DisplayMetrics;
 
 import org.easymock.EasyMock;
 
+import static org.junit.Assert.*;
+
 /**
  * Test for {@link ApplicationInitializerFactory}.
  */

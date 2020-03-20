@@ -41,6 +41,8 @@ import android.content.SharedPreferences;
 import android.test.InstrumentationTestCase;
 import androidx.test.filters.SmallTest;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  */
 public class ConfigUtilTest extends InstrumentationTestCase {

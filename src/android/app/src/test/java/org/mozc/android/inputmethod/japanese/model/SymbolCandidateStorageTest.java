@@ -30,6 +30,7 @@
 package org.mozc.android.inputmethod.japanese.model;
 
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.emoji.EmojiProviderType;
 import org.mozc.android.inputmethod.japanese.model.SymbolCandidateStorage.SymbolHistoryStorage;

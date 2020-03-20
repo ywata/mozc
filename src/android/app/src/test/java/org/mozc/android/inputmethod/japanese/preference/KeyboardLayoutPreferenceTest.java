@@ -40,6 +40,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
+import static org.junit.Assert.*;
+
 /**
  */
 public class KeyboardLayoutPreferenceTest extends InstrumentationTestCase {

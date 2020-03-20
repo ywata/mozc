@@ -32,6 +32,7 @@ package org.mozc.android.inputmethod.japanese;
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.expectLastCall;
 import static org.easymock.EasyMock.isA;
+import static org.junit.Assert.*;
 
 import org.mozc.android.inputmethod.japanese.FeedbackManager.FeedbackEvent;
 import org.mozc.android.inputmethod.japanese.emoji.EmojiProviderType;

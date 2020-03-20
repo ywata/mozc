@@ -65,6 +65,8 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import static org.junit.Assert.*;
+
 /**
  */
 public class ProbableKeyEventGuesserTest extends InstrumentationTestCaseWithMock {

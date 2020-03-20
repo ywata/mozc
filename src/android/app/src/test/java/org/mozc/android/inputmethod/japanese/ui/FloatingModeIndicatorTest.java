@@ -46,6 +46,8 @@ import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 
+import static org.junit.Assert.*;
+
 /**
  * Test for FloatingCandidateLayoutRenderer.
  */

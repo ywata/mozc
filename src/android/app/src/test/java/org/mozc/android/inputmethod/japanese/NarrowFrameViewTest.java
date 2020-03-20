@@ -30,6 +30,7 @@
 package org.mozc.android.inputmethod.japanese;
 
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.assertNotSame;
 
 import org.mozc.android.inputmethod.japanese.FeedbackManager.FeedbackEvent;
 import org.mozc.android.inputmethod.japanese.hardwarekeyboard.HardwareKeyboard.CompositionSwitchMode;

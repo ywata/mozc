@@ -30,6 +30,8 @@
 package org.mozc.android.inputmethod.japanese.ui;
 
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;

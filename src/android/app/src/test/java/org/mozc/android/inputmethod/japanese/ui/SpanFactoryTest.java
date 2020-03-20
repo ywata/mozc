@@ -30,6 +30,7 @@
 package org.mozc.android.inputmethod.japanese.ui;
 
 import static android.test.MoreAsserts.assertEmpty;
+import static org.junit.runners.model.MultipleFailureException.assertEmpty;
 
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Annotation;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;

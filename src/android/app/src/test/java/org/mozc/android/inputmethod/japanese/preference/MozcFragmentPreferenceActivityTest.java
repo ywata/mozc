@@ -30,6 +30,8 @@
 package org.mozc.android.inputmethod.japanese.preference;
 
 import static android.test.MoreAsserts.assertEmpty;
+import static org.junit.Assert.assertTrue;
+import static org.junit.runners.model.MultipleFailureException.assertEmpty;
 
 import org.mozc.android.inputmethod.japanese.testing.ActivityInstrumentationTestCase2WithMock;
 

@@ -41,6 +41,8 @@ import android.content.SharedPreferences;
 import androidx.test.filters.SmallTest;
 import android.view.View;
 
+import static org.junit.Assert.*;
+
 /**
  */
 public class FirstTimeLaunchActivityTest extends

@@ -38,6 +38,8 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 
+import static org.junit.Assert.*;
+
 /**
  */
 public class InOutAnimatedFrameLayoutTest extends InstrumentationTestCaseWithMock {

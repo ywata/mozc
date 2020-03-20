@@ -43,6 +43,8 @@ import android.content.res.Resources;
 import android.test.InstrumentationTestCase;
 import androidx.test.filters.SmallTest;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  */
 public class ClientSidePreferenceTest extends InstrumentationTestCase {

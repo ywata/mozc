@@ -44,6 +44,8 @@ import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
 
+import static org.junit.Assert.*;
+
 /**
  */
 public class EmojiUtilTest extends InstrumentationTestCase {

@@ -33,6 +33,8 @@ import static org.easymock.EasyMock.anyInt;
 import static org.easymock.EasyMock.anyObject;
 import static org.easymock.EasyMock.eq;
 import static org.easymock.EasyMock.expect;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;

@@ -35,6 +35,8 @@ import android.graphics.drawable.Drawable;
 import android.test.InstrumentationTestCase;
 import androidx.test.filters.SmallTest;
 
+import static org.junit.Assert.assertNotSame;
+
 /**
  */
 public class ScrollGuideViewTest extends InstrumentationTestCase {
