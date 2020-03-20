@@ -20,9 +20,13 @@ fi
 
 
 cd $DIR/../src/android/app/src/main
-if [ ! -e  "$DIR/../src/android/app/src/main" ]; then
+if [ ! -L res ]; then
     # TODO: This should be better handled by resource.gyp or similar.
     ln -s ../../../../out_android/Debug/gen/android/resources/res .
+    if [ $? -ne 0 ]; then
+	echo "res error" 2&>1
+	exit 1
+    fi
 fi
 
 cd $DIR/../src
