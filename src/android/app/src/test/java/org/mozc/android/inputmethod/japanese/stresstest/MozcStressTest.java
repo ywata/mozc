@@ -47,7 +47,7 @@ import android.app.Instrumentation;
 import android.content.Context;
 import android.graphics.Rect;
 import android.test.InstrumentationTestCase;
-import ndroidx.test.annotation.UiThreadTest;
+import androidx.test.annotation.UiThreadTest;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;

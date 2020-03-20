@@ -44,7 +44,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.net.Uri;
-import ndroidx.test.annotation.UiThreadTest;
+import androidx.test.annotation.UiThreadTest;
 import android.test.mock.MockContext;
 import android.test.mock.MockPackageManager;
 import androidx.test.filters.SmallTest;

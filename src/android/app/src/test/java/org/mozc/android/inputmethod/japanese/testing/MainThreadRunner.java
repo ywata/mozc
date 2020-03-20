@@ -29,7 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese.testing;
 
-import ndroidx.test.annotation.UiThreadTest;
+import androidx.test.annotation.UiThreadTest;
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyboardView;
 

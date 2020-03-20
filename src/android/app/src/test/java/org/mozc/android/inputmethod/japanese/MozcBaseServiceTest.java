@@ -101,7 +101,7 @@ import android.content.res.Resources;
 import android.media.AudioManager;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import ndroidx.test.annotation.UiThreadTest;
+import androidx.test.annotation.UiThreadTest;
 import androidx.test.filters.SmallTest;
 import android.text.InputType;
 import android.text.SpannableStringBuilder;
