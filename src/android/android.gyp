@@ -168,16 +168,16 @@
           'inputs': [
             '../build_tools/replace_version.py',
             '../mozc_version.txt',
-            'AndroidManifest_template.xml',
+            'app/src/main/AndroidManifest_template.xml',
           ],
           'outputs': [
-            'AndroidManifest.xml',
+            'app/src/main/ndroidManifest.xml',
           ],
           'action': [
             'python', '../build_tools/replace_version.py',
             '--version_file', '../mozc_version.txt',
-            '--input', 'AndroidManifest_template.xml',
-            '--output', 'AndroidManifest.xml',
+            '--input', 'app/src/main/AndroidManifest_template.xml',
+            '--output', 'app/src/main/AndroidManifest.xml',
             '--branding', '<(branding)',
           ],
         },
