@@ -55,7 +55,7 @@ import com.google.common.base.Optional;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.MotionEvent;
 import android.view.View;
 

@@ -57,7 +57,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.test.mock.MockResources;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.text.InputType;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;

@@ -33,7 +33,7 @@ import org.mozc.android.inputmethod.japanese.InOutAnimatedFrameLayout.Visibility
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;

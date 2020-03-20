@@ -35,7 +35,7 @@ import com.google.common.base.Optional;
 
 import android.content.res.Resources;
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 

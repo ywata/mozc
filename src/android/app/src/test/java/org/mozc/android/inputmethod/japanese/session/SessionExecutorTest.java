@@ -86,8 +86,8 @@ import android.os.Looper;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.test.mock.MockContext;
-import android.test.suitebuilder.annotation.LargeTest;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.LargeTest;
+import androidx.test.filters.SmallTest;
 import android.view.KeyEvent;
 
 import org.easymock.Capture;

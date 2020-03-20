@@ -43,7 +43,7 @@ import org.mozc.android.inputmethod.japanese.view.Skin;
 import com.google.common.base.Optional;
 
 import android.annotation.TargetApi;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.inputmethod.EditorInfo;

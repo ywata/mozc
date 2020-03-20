@@ -50,7 +50,7 @@ import com.google.common.base.Optional;
 import android.content.Context;
 import androidx.core.view.accessibility.AccessibilityEventCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.MotionEvent;
 import android.view.View;
 

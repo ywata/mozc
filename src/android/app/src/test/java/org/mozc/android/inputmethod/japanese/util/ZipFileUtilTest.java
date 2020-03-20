@@ -33,7 +33,7 @@ import org.mozc.android.inputmethod.japanese.MozcUtil;
 
 import android.test.InstrumentationTestCase;
 import android.test.MoreAsserts;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -35,7 +35,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Annotation
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Span;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import junit.framework.TestCase;
 

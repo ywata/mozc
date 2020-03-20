@@ -51,7 +51,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceGroup;
 import android.test.mock.MockContext;
 import android.test.mock.MockResources;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Xml;

@@ -41,7 +41,7 @@ import com.google.common.base.Preconditions;
 
 import android.content.res.Resources;
 import android.graphics.Rect;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.MotionEvent;
 
 /**

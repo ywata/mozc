@@ -39,7 +39,7 @@ import static org.easymock.EasyMock.isA;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 
 import android.content.Context;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.widget.FrameLayout;
 

@@ -44,7 +44,7 @@ import android.content.ComponentName;
 import android.inputmethodservice.InputMethodService;
 import android.os.Binder;
 import android.os.IBinder;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodSubtype;
 

@@ -32,7 +32,7 @@ package org.mozc.android.inputmethod.japanese.preference;
 import org.mozc.android.inputmethod.japanese.resources.R;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import junit.framework.TestCase;
 

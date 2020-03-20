@@ -46,7 +46,7 @@ import com.google.common.base.Preconditions;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.KeyEvent;
 
 import java.util.Arrays;

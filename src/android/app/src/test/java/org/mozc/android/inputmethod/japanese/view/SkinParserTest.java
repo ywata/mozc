@@ -33,7 +33,7 @@ import org.mozc.android.inputmethod.japanese.view.SkinParser.SkinParserException
 
 import android.content.res.Resources;
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  * Test for {@code SkinParser}

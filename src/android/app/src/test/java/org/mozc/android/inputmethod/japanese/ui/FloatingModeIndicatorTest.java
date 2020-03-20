@@ -41,8 +41,8 @@ import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWith
 
 import android.annotation.TargetApi;
 import android.os.Handler;
-import android.test.UiThreadTest;
-import android.test.suitebuilder.annotation.SmallTest;
+import ndroidx.test.annotation.UiThreadTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 

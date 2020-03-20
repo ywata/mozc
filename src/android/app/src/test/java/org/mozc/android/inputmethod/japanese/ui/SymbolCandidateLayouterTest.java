@@ -36,7 +36,7 @@ import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Row;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Span;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import junit.framework.TestCase;
 

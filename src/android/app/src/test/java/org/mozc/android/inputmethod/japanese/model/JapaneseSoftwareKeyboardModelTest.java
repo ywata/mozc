@@ -35,7 +35,7 @@ import org.mozc.android.inputmethod.japanese.preference.ClientSidePreference.Inp
 import org.mozc.android.inputmethod.japanese.preference.ClientSidePreference.KeyboardLayout;
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.text.InputType;
 
 import junit.framework.TestCase;

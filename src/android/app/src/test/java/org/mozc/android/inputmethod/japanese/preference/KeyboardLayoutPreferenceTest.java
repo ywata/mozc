@@ -34,7 +34,7 @@ import org.mozc.android.inputmethod.japanese.resources.R;
 
 import android.content.Context;
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;

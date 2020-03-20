@@ -36,7 +36,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Picture;
 import android.graphics.drawable.PictureDrawable;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import junit.framework.TestCase;
 

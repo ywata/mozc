@@ -36,8 +36,8 @@ import org.mozc.android.inputmethod.japanese.testing.MemoryLogger;
 import com.google.common.base.Strings;
 
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.LargeTest;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.LargeTest;
+import androidx.test.filters.SmallTest;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

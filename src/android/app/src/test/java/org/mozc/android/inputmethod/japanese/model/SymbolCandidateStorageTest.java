@@ -39,7 +39,7 @@ import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWith
 import org.mozc.android.inputmethod.japanese.testing.Parameter;
 import com.google.common.base.Optional;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import java.util.Arrays;
 import java.util.Collections;

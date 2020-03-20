@@ -33,7 +33,7 @@ import org.mozc.android.inputmethod.japanese.FeedbackManager.FeedbackEvent;
 import org.mozc.android.inputmethod.japanese.FeedbackManager.FeedbackListener;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  */

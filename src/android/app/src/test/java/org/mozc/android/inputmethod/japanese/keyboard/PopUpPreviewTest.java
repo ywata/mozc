@@ -45,7 +45,7 @@ import com.google.common.base.Optional;
 import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;

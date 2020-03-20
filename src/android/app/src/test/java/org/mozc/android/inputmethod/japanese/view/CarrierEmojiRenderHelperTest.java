@@ -43,7 +43,7 @@ import org.mozc.android.inputmethod.japanese.view.CarrierEmojiRenderHelper.Backg
 import com.google.common.base.Optional;
 
 import android.os.Handler;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.util.TypedValue;
 import android.view.View;
 

@@ -49,7 +49,7 @@ import com.google.common.io.ByteStreams;
 
 import android.content.res.Configuration;
 import android.test.MoreAsserts;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.util.SparseArray;
 
 import org.easymock.Capture;

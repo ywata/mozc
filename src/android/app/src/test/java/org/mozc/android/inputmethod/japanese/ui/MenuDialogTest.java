@@ -47,7 +47,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.test.mock.MockContext;
 import android.test.mock.MockPackageManager;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import java.util.Collections;
 import java.util.List;

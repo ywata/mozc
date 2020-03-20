@@ -33,7 +33,7 @@ import org.mozc.android.inputmethod.japanese.view.SkinType;
 
 import android.graphics.drawable.Drawable;
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  */

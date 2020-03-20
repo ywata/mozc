@@ -34,7 +34,7 @@ import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import java.util.List;
 

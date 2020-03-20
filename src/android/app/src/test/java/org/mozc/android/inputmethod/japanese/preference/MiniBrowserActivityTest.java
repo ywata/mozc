@@ -44,10 +44,10 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.net.Uri;
-import android.test.UiThreadTest;
+import ndroidx.test.annotation.UiThreadTest;
 import android.test.mock.MockContext;
 import android.test.mock.MockPackageManager;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.webkit.WebView;
 
 import org.easymock.Capture;

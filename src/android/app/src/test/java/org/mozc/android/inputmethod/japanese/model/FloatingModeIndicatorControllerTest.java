@@ -35,7 +35,7 @@ import org.mozc.android.inputmethod.japanese.model.FloatingModeIndicatorControll
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.CompositionMode;
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.inputmethod.EditorInfo;
 
 /**

@@ -40,7 +40,7 @@ import org.mozc.android.inputmethod.japanese.view.Skin;
 import org.mozc.android.inputmethod.japanese.view.SkinType;
 
 import android.content.Context;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.view.View.OnClickListener;
 

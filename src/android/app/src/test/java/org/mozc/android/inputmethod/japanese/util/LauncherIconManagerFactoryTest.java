@@ -37,7 +37,7 @@ import com.google.common.base.Optional;
 
 import android.content.SharedPreferences;
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  * Test for LauncherIconManagerFactory.

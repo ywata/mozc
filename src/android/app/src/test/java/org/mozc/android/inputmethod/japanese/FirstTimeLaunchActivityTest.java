@@ -29,6 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese;
 
+import androidx.test.annotation.UiThreadTest;
 import org.mozc.android.inputmethod.japanese.FirstTimeLaunchActivity.SendUsageStatsChangeListener;
 import org.mozc.android.inputmethod.japanese.preference.PreferenceUtil;
 import org.mozc.android.inputmethod.japanese.resources.R;
@@ -37,8 +38,7 @@ import org.mozc.android.inputmethod.japanese.testing.MozcPreferenceUtil;
 import com.google.common.base.Optional;
 
 import android.content.SharedPreferences;
-import android.test.UiThreadTest;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 
 /**

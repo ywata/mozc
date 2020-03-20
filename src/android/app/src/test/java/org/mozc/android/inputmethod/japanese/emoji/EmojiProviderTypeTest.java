@@ -39,7 +39,7 @@ import org.mozc.android.inputmethod.japanese.testing.Parameter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  */

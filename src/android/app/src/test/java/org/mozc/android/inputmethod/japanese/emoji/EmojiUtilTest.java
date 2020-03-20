@@ -37,7 +37,7 @@ import com.google.common.base.Optional;
 
 import android.os.Bundle;
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.inputmethod.EditorInfo;
 
 import java.util.Collections;

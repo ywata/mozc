@@ -46,7 +46,7 @@ import android.graphics.Rect;
 import android.os.Build;
 import androidx.core.view.accessibility.AccessibilityEventCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;

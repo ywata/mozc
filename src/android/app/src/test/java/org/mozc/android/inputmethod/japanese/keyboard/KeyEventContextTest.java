@@ -36,7 +36,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchA
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.TouchEvent;
 import com.google.common.base.Optional;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import junit.framework.TestCase;
 

@@ -46,8 +46,8 @@ import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.test.MoreAsserts;
-import android.test.suitebuilder.annotation.MediumTest;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.MediumTest;
+import androidx.test.filters.SmallTest;
 
 import org.easymock.IMocksControl;
 

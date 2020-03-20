@@ -34,7 +34,7 @@ import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWith
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  */

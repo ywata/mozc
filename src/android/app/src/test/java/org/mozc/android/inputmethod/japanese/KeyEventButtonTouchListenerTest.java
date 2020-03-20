@@ -47,7 +47,7 @@ import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWith
 
 import android.content.Context;
 import android.os.Looper;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;

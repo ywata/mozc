@@ -43,7 +43,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.test.mock.MockContext;
 import android.test.mock.MockResources;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.text.InputType;
 import android.view.inputmethod.EditorInfo;
 

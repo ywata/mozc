@@ -31,7 +31,7 @@ package org.mozc.android.inputmethod.japanese.preference;
 
 import android.os.Bundle;
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  * TODO(matsuzakit): Test #addPreferences method.

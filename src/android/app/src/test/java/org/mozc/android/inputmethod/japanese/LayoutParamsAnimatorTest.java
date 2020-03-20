@@ -34,7 +34,7 @@ import org.mozc.android.inputmethod.japanese.LayoutParamsAnimator.InterpolationL
 import android.content.Context;
 import android.os.Handler;
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.LinearInterpolator;

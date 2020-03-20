@@ -34,7 +34,7 @@ import static android.test.MoreAsserts.assertEmpty;
 import org.mozc.android.inputmethod.japanese.testing.ActivityInstrumentationTestCase2WithMock;
 
 import android.preference.PreferenceActivity.Header;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 import java.util.ArrayList;
 import java.util.List;

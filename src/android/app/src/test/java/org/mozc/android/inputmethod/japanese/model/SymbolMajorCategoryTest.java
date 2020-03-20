@@ -31,7 +31,7 @@ package org.mozc.android.inputmethod.japanese.model;
 
 import org.mozc.android.inputmethod.japanese.testing.InstrumentationTestCaseWithMock;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  * Tests for SymbolMajorCategory.

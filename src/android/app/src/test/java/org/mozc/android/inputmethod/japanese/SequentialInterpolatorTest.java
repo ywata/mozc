@@ -29,7 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Interpolator;
 

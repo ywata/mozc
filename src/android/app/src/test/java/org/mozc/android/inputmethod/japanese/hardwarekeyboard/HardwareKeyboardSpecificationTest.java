@@ -45,7 +45,7 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.test.InstrumentationTestCase;
 import android.test.MoreAsserts;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.view.InputDevice;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;

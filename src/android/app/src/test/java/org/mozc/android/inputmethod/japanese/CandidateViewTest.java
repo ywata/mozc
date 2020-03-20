@@ -47,7 +47,7 @@ import org.mozc.android.inputmethod.japanese.ui.ScrollGuideView;
 import org.mozc.android.inputmethod.japanese.view.Skin;
 import com.google.common.base.Optional;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.widget.LinearLayout;
 
 import org.easymock.EasyMock;

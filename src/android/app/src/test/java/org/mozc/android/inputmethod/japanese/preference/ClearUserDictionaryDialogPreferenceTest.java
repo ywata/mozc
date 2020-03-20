@@ -41,7 +41,7 @@ import com.google.common.base.Optional;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 import android.util.AttributeSet;
 import android.util.Xml;
 

@@ -35,7 +35,7 @@ import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Input.Comman
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCommands.Output;
 
 import android.test.InstrumentationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
+import androidx.test.filters.SmallTest;
 
 /**
  */

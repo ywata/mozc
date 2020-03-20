@@ -29,6 +29,7 @@
 
 package org.mozc.android.inputmethod.japanese.testing;
 
+import ndroidx.test.annotation.UiThreadTest;
 import org.mozc.android.inputmethod.japanese.keyboard.Keyboard;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyboardView;
 
@@ -39,7 +40,7 @@ import android.view.View;
 
 /**
  * Utility class to run some methods on the UI thread.
- * We should consider to use {@link android.test.UiThreadTest} annotation instead.
+ * We should consider to use {@link UiThreadTest} annotation instead.
  *
  * TODO(hidehiko): Replace MainThreadRunner's methods by UiThreadTest, and deprecate this class.
  *
