@@ -29,23 +29,30 @@
 
 package org.mozc.android.inputmethod.japanese.ui;
 
-import static android.test.MoreAsserts.assertEmpty;
-import static org.junit.runners.model.MultipleFailureException.assertEmpty;
+//import static android.test.MoreAsserts.assertEmpty;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.Annotation;
 import org.mozc.android.inputmethod.japanese.protobuf.ProtoCandidates.CandidateWord;
 import org.mozc.android.inputmethod.japanese.ui.CandidateLayout.Span;
 
 import androidx.test.filters.SmallTest;
 
-import junit.framework.TestCase;
+import java.util.List;
+
 
 /**
  * Unit test for {@link SpanFactory}.
  *
  */
-public class SpanFactoryTest extends TestCase {
-  @SmallTest
+@RunWith(AndroidJUnit4.class)
+public class SpanFactoryTest{
+  final double epsilon = 0.1;
+  @SmallTest @Test
   public void testMeasuredWidth() {
     SpanFactory spanFactory = new SpanFactory();
     spanFactory.setValueTextSize(10);
@@ -54,30 +61,31 @@ public class SpanFactoryTest extends TestCase {
     // Empty candidate.
     {
       Span span = spanFactory.newInstance(CandidateWord.getDefaultInstance());
-      assertEquals(0f, span.getValueWidth());
-      assertEquals(0f, span.getDescriptionWidth());
-      assertEmpty(span.getSplitDescriptionList());
+      assertEquals(0f, span.getValueWidth(), epsilon);
+      assertEquals(0f, span.getDescriptionWidth(), epsilon);
+      List<String> rs = span.getSplitDescriptionList();
+      assertTrue(rs.isEmpty());
     }
 
     // Candidate with only value.
     CandidateWord valueCandidate = CandidateWord.newBuilder().setValue("This is candidate").build();
     Span valueSpan = spanFactory.newInstance(valueCandidate);
     assertTrue(valueSpan.getValueWidth() > 0);
-    assertEquals(0f, valueSpan.getDescriptionWidth());
+    assertEquals(0f, valueSpan.getDescriptionWidth(), epsilon);
 
     // Candidate with only description.
     CandidateWord descriptionCandidate =
         CandidateWord.newBuilder().setAnnotation(Annotation.newBuilder().setDescription("desc"))
             .build();
     Span descriptionSpan = spanFactory.newInstance(descriptionCandidate);
-    assertEquals(0f, descriptionSpan.getValueWidth());
+    assertEquals(0f, descriptionSpan.getValueWidth(), epsilon);
     assertTrue(descriptionSpan.getDescriptionWidth() > 0);
 
     // Candidate with both value and description.
     CandidateWord mergedCandidate =
         valueCandidate.toBuilder().mergeFrom(descriptionCandidate).build();
     Span mergedSpan = spanFactory.newInstance(mergedCandidate);
-    assertEquals(valueSpan.getValueWidth(), mergedSpan.getValueWidth());
-    assertEquals(descriptionSpan.getDescriptionWidth(), mergedSpan.getDescriptionWidth());
+    assertEquals(valueSpan.getValueWidth(), mergedSpan.getValueWidth(), epsilon);
+    assertEquals(descriptionSpan.getDescriptionWidth(), mergedSpan.getDescriptionWidth(), epsilon);
   }
 }

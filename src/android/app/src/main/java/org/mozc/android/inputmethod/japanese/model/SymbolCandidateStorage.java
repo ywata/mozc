@@ -326,7 +326,7 @@ public class SymbolCandidateStorage {
 
   /** Builds the {@link CandidateList} based on the given values and emojiDescriptionMap. */
   @VisibleForTesting
-  CandidateList toCandidateList(
+  static CandidateList toCandidateList(
       List<String> values, Optional<Map<String, String>> emojiDescriptionMap) {
     Preconditions.checkNotNull(emojiDescriptionMap);
     if (Preconditions.checkNotNull(values).isEmpty()) {
