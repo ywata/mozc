@@ -13,7 +13,7 @@ Build Status
 
 |Android + OS X + Linux + NaCl |Windows |
 |:----------------------------:|:------:|
-[![Build Status](https://travis-ci.org/google/mozc.svg?branch=master)](https://travis-ci.org/google/mozc) |[![Build status](https://ci.appveyor.com/api/projects/status/1rvmtp7f80jv7ehf/branch/master?svg=true)](https://ci.appveyor.com/project/google/mozc/branch/master) |
+[![Build Status](https://travis-ci.org/ywata/mozc.svg?branch=master)](https://travis-ci.org/ywata/mozc) |[![Build status](https://ci.appveyor.com/api/projects/status/1rvmtp7f80jv7ehf/branch/master?svg=true)](https://ci.appveyor.com/project/ywata/mozc/branch/master) |
 
 What's Mozc?
 ------------
@@ -80,3 +80,78 @@ Public Domain.  See the comment in
 
 UNICODE, INC. LICENSE AGREEMENT.
 See each file header for details.
+
+
+Mozc Update project, not provided by Google
+-------------------------------------------
+
+The aurhor is currently working on mozc buildable with gradle.
+This is because google's mozc project has no update since around 2018 and
+I'd like to make small modification to Japanese input keyboard on Android.
+
+The author has no knowleage about Android, gradle nor gyp etc to build Android mozc application,
+the way I have to make application buildable and also make test successfuly run.
+Making source code buildable was relatively easy but I struggled to make tests buildable.
+Even though most of the tests are buildable, many tests do not finish successufly at the time moment.
+
+While I struggled test buildable,
+I decided to make update procedure reproducable for experienced developper
+so that someone who has much knowleage about Android etc can improve my effort without trials and error.
+
+Strategies
+-----------
+
+I investigated some of forked repository. I found Kurage project(https://github.com/TinyFort/Kurage)
+itroduced big change against Mozc. The project already adapted to gradle as a build system.
+It contained some improvement to UI of mozc but I did not chooose the project as the origin of fork.
+Because the project changed package names etc from org.mozc to net.tinyfort.kurage and I thought
+it make my project incompatible to many of the existing forked repositories. Although I did not forked from
+Kurage project, I owe some of the results below to Kurage project.
+
+They includes:
+- Docker file and scripts in docker/ubuntu18.03/
+- Build script in builder/
+- Initial gradle related setups.
+
+
+Other than I used the above, here are my strategy I took:
+- Keep original package names as they are.
+- Make Android application buildable with gradle (to work on Android Studio)
+- Choose Android API 28 as standard API (because my smart phone runs on Android Pie)
+- Build step is divided into three steps as in builder/android-debug-build.sh
+  - run python build_mozc.py gyp
+  - run python build_mozc.py build
+  - run ./gradlew assemble
+- Test should be also migrated.
+- Make migration process reproducable.
+
+Branches
+--------
+
+I created the following branches which are relatively independent:
+All the following branches are created from latest google's master branch.
+
+- enable-docker
+  Update docker to ubuntu18.04. Mostly from Kurage project.
+- enable-gradle
+  Introduce gradle file
+- adjust-gyps
+  Update some gyp files
+- introduce-builder
+  Build script.
+  Mostly from Kurage project.
+- move-main
+  Move source code to gradle layout and make android application buildable.
+- move-test
+  Move source code to gradle layout.
+
+- revive-tests
+  The above branches are merges to a branch created from master.
+  Update to tests code and gradle settings are updated directly on this branch.
+
+
+
+
+
+
+
