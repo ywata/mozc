@@ -33,10 +33,18 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 
 import junit.framework.TestCase;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertSame;
 
 /**
  */
-public class WeakDrawableCacheTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class WeakDrawableCacheTest {
+  @Test
   public void testWeakDrawableCache() {
     Drawable drawable = new ColorDrawable();
     int key = 10;

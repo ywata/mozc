@@ -43,13 +43,18 @@ import junit.framework.TestCase;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
 /**
  */
+@RunWith(AndroidJUnit4.class)
 public class SymbolCandidateLayouterTest extends TestCase {
   // Dummy span factory.
   private static final SpanFactory DUMMY_SPAN_FACTORY = new SpanFactory();
 
-  @SmallTest
+  @SmallTest @Test
   public void testSetViewSize() {
     SymbolCandidateLayouter layouter = new SymbolCandidateLayouter();
     layouter.setSpanFactory(DUMMY_SPAN_FACTORY);
@@ -62,6 +67,7 @@ public class SymbolCandidateLayouterTest extends TestCase {
     assertTrue(layouter.setViewSize(160, 480));
   }
 
+  @Test
   public void testPageSize() {
     SymbolCandidateLayouter layouter = new SymbolCandidateLayouter();
     layouter.setSpanFactory(DUMMY_SPAN_FACTORY);
@@ -78,7 +84,7 @@ public class SymbolCandidateLayouterTest extends TestCase {
     assertEquals(10, layouter.getPageHeight());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testBuildRowList() {
     // Create ten candidate words numbered 0 to 9.
     CandidateList.Builder builder = CandidateList.newBuilder();
@@ -159,7 +165,7 @@ public class SymbolCandidateLayouterTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testLayoutSpanList() {
     List<Span> spanList = new ArrayList<Span>();
     for (int i = 0; i < 6; ++i) {
@@ -185,7 +191,7 @@ public class SymbolCandidateLayouterTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testLayoutRowList() {
     List<Row> rowList = new ArrayList<Row>();
     for (int i = 0; i < 4; ++i) {

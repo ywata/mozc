@@ -41,10 +41,18 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 /**
  */
-public class PreferencePageTest extends TestCase {
-  @SmallTest
+@RunWith(AndroidJUnit4.class)
+public class PreferencePageTest {
+  @SmallTest @Test
   public void testResourceIdList() {
     class TestData extends Parameter {
       final PreferencePage preferencePage;

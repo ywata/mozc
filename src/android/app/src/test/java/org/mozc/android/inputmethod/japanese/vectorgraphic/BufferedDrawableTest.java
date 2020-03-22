@@ -43,10 +43,17 @@ import junit.framework.TestCase;
 import java.util.Locale;
 import java.util.Random;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.fail;
+
 /**
  * Tests for BufferedDrawable.
  */
-public class BufferedDrawableTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class BufferedDrawableTest {
 
   private Picture createPicture(Random random, int width, int height, int lines) {
     Picture picture = new Picture();
@@ -106,7 +113,7 @@ public class BufferedDrawableTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testIdentityMatrix() {
     int canvasSize = 512;
     int iteration = 30;
@@ -124,7 +131,7 @@ public class BufferedDrawableTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testTranslation() {
     int canvasSize = 512;
     int iteration = 30;
@@ -147,7 +154,7 @@ public class BufferedDrawableTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testScalingTransformation() {
     int canvasSize = 512;
     int iteration = 30;
@@ -171,7 +178,7 @@ public class BufferedDrawableTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testVariousCanvasSize() {
     int[] canvasWidth = {15, 16, 17, 255, 256, 257};
     int[] canvasHeight = {15, 16, 17, 255, 256, 257};

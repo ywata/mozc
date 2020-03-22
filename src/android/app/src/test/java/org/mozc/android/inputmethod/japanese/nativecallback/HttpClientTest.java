@@ -43,10 +43,22 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 import java.net.URI;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
 /**
  */
-public class HttpClientTest extends TestCase {
-
+@RunWith(AndroidJUnit4.class)
+public class HttpClientTest {
+  @Test
   public void testCreateRequest() throws IOException {
     URI url = URI.create("http://URI");
     {

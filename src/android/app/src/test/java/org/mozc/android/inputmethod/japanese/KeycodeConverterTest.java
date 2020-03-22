@@ -32,16 +32,24 @@ package org.mozc.android.inputmethod.japanese;
 import android.view.KeyEvent;
 
 import junit.framework.TestCase;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  */
-public class KeycodeConverterTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class KeycodeConverterTest {
+  @Test
   public void testGetMozcKey() {
     for (int i = 0; i < 128; ++i) {
       assertEquals(i, KeycodeConverter.getMozcKeyEvent(i).getKeyCode());
     }
   }
 
+  @Test
   public void testIsMetaKey() {
     assertFalse(KeycodeConverter.isMetaKey(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_A)));
     assertTrue(KeycodeConverter.isMetaKey(

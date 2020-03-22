@@ -39,11 +39,20 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.EnumSet;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.fail;
+
 /**
  * Test for Key class.
  */
-public class KeyTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class KeyTest {
 
+  @Test
   public void testKey_keyStateListOrder() {
     KeyState state1 = new KeyState("", EnumSet.of(MetaState.SHIFT),
         Collections.<MetaState>emptySet(), Collections.<MetaState>emptySet(),
@@ -88,6 +97,7 @@ public class KeyTest extends TestCase {
     assertSame(fallbackState, fallback12.getKeyState(EnumSet.of(MetaState.COMPOSING)).get());
   }
 
+  @Test
   public void testKey_fallbackAndDefault() {
     KeyState defaultState = new KeyState("", Collections.<MetaState>emptySet(),
         Collections.<MetaState>emptySet(), Collections.<MetaState>emptySet(),

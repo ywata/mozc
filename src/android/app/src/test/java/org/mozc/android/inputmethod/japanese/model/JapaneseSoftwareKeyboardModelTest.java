@@ -39,12 +39,18 @@ import androidx.test.filters.SmallTest;
 import android.text.InputType;
 
 import junit.framework.TestCase;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  */
-public class JapaneseSoftwareKeyboardModelTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class JapaneseSoftwareKeyboardModelTest {
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetKeyboardSpecification() {
     class TestData extends Parameter {
       final KeyboardLayout keyboardLayout;
@@ -264,7 +270,7 @@ public class JapaneseSoftwareKeyboardModelTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testInputType() {
     class TestData extends Parameter {
       final int inputType;
@@ -440,7 +446,7 @@ public class JapaneseSoftwareKeyboardModelTest extends TestCase {
 
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testInputTypeScenario() {
     JapaneseSoftwareKeyboardModel model = new JapaneseSoftwareKeyboardModel();
     model.setKeyboardLayout(KeyboardLayout.TWELVE_KEYS);
@@ -463,7 +469,7 @@ public class JapaneseSoftwareKeyboardModelTest extends TestCase {
     assertEquals(KeyboardMode.KANA, model.getKeyboardMode());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testNumberKeyboardSwitchingIssue_b22676055() {
     JapaneseSoftwareKeyboardModel model = new JapaneseSoftwareKeyboardModel();
     model.setKeyboardLayout(KeyboardLayout.TWELVE_KEYS);

@@ -44,9 +44,17 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
 /**
  */
-public class SocketSessionHandlerTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class SocketSessionHandlerTest {
+  @Test
   public void testSessionHandlerSocket() throws UnknownHostException, IOException {
     final InetAddress host = InetAddress.getByName("localhost");
     final ServerSocket serverSocket = new ServerSocket(0);

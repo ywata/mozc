@@ -34,11 +34,19 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Interpolator;
 
 import junit.framework.TestCase;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  */
-public class SequentialInterpolatorTest extends TestCase {
-  @SmallTest
+@RunWith(AndroidJUnit4.class)
+public class SequentialInterpolatorTest {
+  private double epsilon = 0.01;
+  @SmallTest @Test
   public void testBuildEmpty() {
     try {
       SequentialInterpolator.newBuilder().build();
@@ -48,7 +56,7 @@ public class SequentialInterpolatorTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testBuildNegativeDuration() {
     try {
       SequentialInterpolator.newBuilder().add(new AccelerateInterpolator(), -1f, 1f).build();
@@ -58,7 +66,7 @@ public class SequentialInterpolatorTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testBuildInvalidTarget() {
     try {
       SequentialInterpolator
@@ -87,17 +95,17 @@ public class SequentialInterpolatorTest extends TestCase {
         .build();
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetInterpolationIdentical() {
     Interpolator original = new AccelerateInterpolator();
     Interpolator sequential = SequentialInterpolator.newBuilder().add(original, 1f, 1f).build();
     for (float i = 0f; i < 1f; i += 0.01f) {
-      assertEquals(original.getInterpolation(i), sequential.getInterpolation(i));
+      assertEquals(original.getInterpolation(i), sequential.getInterpolation(i), epsilon);
     }
-    assertEquals(original.getInterpolation(1f), sequential.getInterpolation(1f));
+    assertEquals(original.getInterpolation(1f), sequential.getInterpolation(1f), epsilon);
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetInterpolationSequential() {
     Interpolator sequential = SequentialInterpolator
         .newBuilder()
@@ -107,11 +115,11 @@ public class SequentialInterpolatorTest extends TestCase {
         .add(new AccelerateInterpolator(), 1f, -4f)
         .add(new AccelerateInterpolator(), 1f, 1f)
         .build();
-    assertEquals(0f, sequential.getInterpolation(0f * 1f / 5f));
-    assertEquals(-1f, sequential.getInterpolation(1f * 1f / 5f));
-    assertEquals(-2f, sequential.getInterpolation(2f * 1f / 5f));
-    assertEquals(-3f, sequential.getInterpolation(3f * 1f / 5f));
-    assertEquals(-4f, sequential.getInterpolation(4f * 1f / 5f));
-    assertEquals(1f, sequential.getInterpolation(5f * 1f / 5f));
+    assertEquals(0f, sequential.getInterpolation(0f * 1f / 5f), epsilon);
+    assertEquals(-1f, sequential.getInterpolation(1f * 1f / 5f), epsilon);
+    assertEquals(-2f, sequential.getInterpolation(2f * 1f / 5f), epsilon);
+    assertEquals(-3f, sequential.getInterpolation(3f * 1f / 5f), epsilon);
+    assertEquals(-4f, sequential.getInterpolation(4f * 1f / 5f), epsilon);
+    assertEquals(1f, sequential.getInterpolation(5f * 1f / 5f), epsilon);
   }
 }

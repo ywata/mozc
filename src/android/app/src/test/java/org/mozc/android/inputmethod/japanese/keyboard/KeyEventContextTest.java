@@ -29,6 +29,8 @@
 
 package org.mozc.android.inputmethod.japanese.keyboard;
 
+import org.junit.After;
+import org.junit.Before;
 import org.mozc.android.inputmethod.japanese.keyboard.BackgroundDrawableFactory.DrawableType;
 import org.mozc.android.inputmethod.japanese.keyboard.Key.Stick;
 import org.mozc.android.inputmethod.japanese.keyboard.KeyState.MetaState;
@@ -44,9 +46,16 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.EnumSet;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
 /**
  */
-public class KeyEventContextTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class KeyEventContextTest {
 
   private PopUp defaultPopUp;
   private PopUp leftPopUp;
@@ -60,9 +69,8 @@ public class KeyEventContextTest extends TestCase {
   private Key longpressableKeyWithTimeoutTrigger;
   private Key longpressableKeyWithoutTimeoutTrigger;
 
-  @Override
+  @Before
   public void setUp() throws Exception {
-    super.setUp();
 
     defaultPopUp = new PopUp(0, 0, 0, 0, 0, 0, 0);
     leftPopUp = new PopUp(0, 0, 0, 0, 0, 0, 0);
@@ -114,7 +122,7 @@ public class KeyEventContextTest extends TestCase {
                                        longpressableEntityWithoutTimeoutTrigger)))));
   }
 
-  @Override
+  @After
   public void tearDown() throws Exception {
     defaultPopUp = null;
     leftPopUp = null;
@@ -125,8 +133,6 @@ public class KeyEventContextTest extends TestCase {
     defaultState = null;
     modifiedState = null;
     modifiableKey = null;
-
-    super.tearDown();
   }
 
   private static KeyEntity createKeyEntity(int sourceId, int keyCode, int longPressKeyCode) {
@@ -135,7 +141,7 @@ public class KeyEventContextTest extends TestCase {
         Optional.<String>absent(), false, Optional.<PopUp>absent(), 0, 0, 0, 0);
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testIsContained() {
     Key key = new Key(
         0, 0, 30, 50, 0, 0, false, false, Stick.EVEN,
@@ -149,7 +155,7 @@ public class KeyEventContextTest extends TestCase {
     assertFalse(KeyEventContext.isContained(5, 60, key));
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testIsFlickable() {
     // If the key doesn't return KeyState, isFlickable should return false.
     assertFalse(KeyEventContext.isFlickable(
@@ -185,7 +191,7 @@ public class KeyEventContextTest extends TestCase {
         Collections.<MetaState>emptySet()));
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetKeyEntity() {
     assertSame(defaultEntity,
                KeyEventContext.getKeyEntity(
@@ -245,7 +251,7 @@ public class KeyEventContextTest extends TestCase {
                                              Optional.of(Flick.Direction.CENTER)).isPresent());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetKeyCode() {
     KeyEventContext keyEventContext =
         new KeyEventContext(modifiableKey, 0, 0, 0, 100, 100, 1, Collections.<MetaState>emptySet());
@@ -259,7 +265,7 @@ public class KeyEventContextTest extends TestCase {
     assertEquals(KeyEntity.INVALID_KEY_CODE, keyEventContext.getKeyCode());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetKeyCodeForLongPressWithTimeoutTrigger() {
     KeyEventContext keyEventContext =
         new KeyEventContext(longpressableKeyWithTimeoutTrigger, 0, 0, 0, 100, 100, 1,
@@ -270,7 +276,7 @@ public class KeyEventContextTest extends TestCase {
     assertEquals(KeyEntity.INVALID_KEY_CODE, keyEventContext.getKeyCode());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetKeyCodeForLongPressWithoutTimeoutTrigger() {
     KeyEventContext keyEventContext =
         new KeyEventContext(longpressableKeyWithoutTimeoutTrigger, 0, 0, 0, 100, 100, 1,
@@ -281,7 +287,7 @@ public class KeyEventContextTest extends TestCase {
     assertEquals('F', keyEventContext.getKeyCode());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetLongPressKeyCode() {
     KeyEventContext keyEventContext =
         new KeyEventContext(modifiableKey, 0, 0, 0, 100, 100, 1,
@@ -291,7 +297,7 @@ public class KeyEventContextTest extends TestCase {
     assertEquals(KeyEntity.INVALID_KEY_CODE, keyEventContext.getLongPressKeyCode());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetPressedKeyCode() {
     KeyEventContext keyEventContext =
         new KeyEventContext(modifiableKey, 0, 0, 0, 100, 100, 1,
@@ -306,7 +312,7 @@ public class KeyEventContextTest extends TestCase {
     assertEquals('a', keyEventContext.getPressedKeyCode());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetNextMetaState() {
     KeyState onUnmodified = new KeyState(
         "",
@@ -343,7 +349,7 @@ public class KeyEventContextTest extends TestCase {
             .getNextMetaStates(EnumSet.of(MetaState.CAPS_LOCK)));
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testIsMetaStateToggleEvent() {
     Key key = new Key(0, 0, 30, 50, 0, 0, false, false, Stick.EVEN,
                       DrawableType.TWELVEKEYS_REGULAR_KEY_BACKGROUND,
@@ -364,7 +370,7 @@ public class KeyEventContextTest extends TestCase {
     assertFalse(modifierKeyEventContext.isMetaStateToggleEvent());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testGetCurrentPopUp() {
     KeyEventContext keyEventContext =
         new KeyEventContext(modifiableKey, 0, 0, 0, 100, 100, 1,
@@ -379,7 +385,7 @@ public class KeyEventContextTest extends TestCase {
     assertFalse(keyEventContext.getCurrentPopUp().isPresent());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testUpdate() {
     KeyEntity centerEntity = createKeyEntity(1, 'a', 'A');
     KeyEntity leftEntity = createKeyEntity(2, 'b', 'B');
@@ -492,7 +498,7 @@ public class KeyEventContextTest extends TestCase {
     assertEquals(expectedEvent, keyEventContext.getTouchEvent().get());
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testUpdateNonFlickable() {
     KeyEntity keyEntity = createKeyEntity(256, 'a', 'A');
     KeyState keyState = new KeyState(

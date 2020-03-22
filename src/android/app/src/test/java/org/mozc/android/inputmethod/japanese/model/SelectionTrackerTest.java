@@ -40,9 +40,16 @@ import junit.framework.TestCase;
 
 import java.util.Arrays;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 /**
  */
-public class SelectionTrackerTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class SelectionTrackerTest {
   private static Segment createSegment(String text) {
     return Segment.newBuilder()
         .setAnnotation(Annotation.UNDERLINE)
@@ -81,6 +88,7 @@ public class SelectionTrackerTest extends TestCase {
     assertEquals(lastSelectionEnd, tracker.getLastSelectionEnd());
   }
 
+  @Test
   public void testTextViewEmulation() {
     // This is the test for the simplest cases.
     // Tested on Xperia/Galaxy S/Galaxy Nexus share the same behavior.
@@ -203,6 +211,7 @@ public class SelectionTrackerTest extends TestCase {
     assertTracker(6, 7, 7, tracker);
   }
 
+  @Test
   public void testBrowserOnAndroid2_1Emulation() {
     // This test case is make sure that this works well with android 2.1 defualt browser.
     // Extracted expected message by using google.co.jp.
@@ -336,6 +345,7 @@ public class SelectionTrackerTest extends TestCase {
     assertTracker(0, 0, 0, tracker);
   }
 
+  @Test
   public void testBug5647852OnAndroid2_1() {
     SelectionTracker tracker = new SelectionTracker();
 
@@ -375,6 +385,7 @@ public class SelectionTrackerTest extends TestCase {
     assertTracker(0, 2, 2, tracker);
   }
 
+  @Test
   public void testBrowserOnAndroid2_3Emulation() {
     SelectionTracker tracker = new SelectionTracker();
 
@@ -458,6 +469,7 @@ public class SelectionTrackerTest extends TestCase {
     assertTracker(0, 0, 0, tracker);
   }
 
+  @Test
   public void testBug5647860OnAndroid2_3() {
     SelectionTracker tracker = new SelectionTracker();
 
@@ -485,6 +497,7 @@ public class SelectionTrackerTest extends TestCase {
     assertTracker(44, 45, 45, tracker);
   }
 
+  @Test
   public void testBug6504588() {
     SelectionTracker tracker = new SelectionTracker();
 
@@ -621,6 +634,7 @@ public class SelectionTrackerTest extends TestCase {
     tracker.onStartInput(-1, -1, false);
   }
 
+  @Test
   public void testBug7557736() {
     SelectionTracker tracker = new SelectionTracker();
 
@@ -774,6 +788,7 @@ public class SelectionTrackerTest extends TestCase {
     }
   }
 
+  @Test
   public void testBackSpaceOnWebView() {
     runScenario(true,
         new RenderPreedit(1),
@@ -785,6 +800,7 @@ public class SelectionTrackerTest extends TestCase {
         new Selection(1, 1, 1, 1, 0, 1, false, SelectionTracker.DO_NOTHING));
   }
 
+  @Test
   public void testBackSpaceOnTextEdit() {
     runScenario(false,
         new RenderPreedit(1),
@@ -796,6 +812,7 @@ public class SelectionTrackerTest extends TestCase {
         new Selection(1, 1, 1, 1, 0, 1, false, SelectionTracker.RESET_CONTEXT));
   }
 
+  @Test
   public void testBackSpaceOnWebView2() {
     runScenario(true,
         new RenderPreedit(4),
@@ -807,6 +824,7 @@ public class SelectionTrackerTest extends TestCase {
         new Selection(4, 4, 1, 1, 0, 1, false, SelectionTracker.DO_NOTHING));
   }
 
+  @Test
   public void testBackSpaceOnTextEdit2() {
     runScenario(false,
         new RenderPreedit(4),
@@ -818,18 +836,21 @@ public class SelectionTrackerTest extends TestCase {
         new Selection(4, 4, 1, 1, 0, 1, false, SelectionTracker.RESET_CONTEXT));
   }
 
+  @Test
   public void testQuickTypeOnWebView() {
     runScenario(true,
         new RenderPreedit(10),  // If a user types very quickly, merged result will be arrive.
         new Selection(0, 0, 10, 10, 0, 10, false, SelectionTracker.DO_NOTHING));
   }
 
+  @Test
   public void testQuickTypeOnTextEdit() {
     runScenario(false,
         new RenderPreedit(10),  // If a user types very quickly, merged result will be arrive.
         new Selection(0, 0, 10, 10, 0, 10, false, SelectionTracker.DO_NOTHING));
   }
 
+  @Test
   public void testCompletionOnWebView() {
     runScenario(true,
         // Type two characters. Corresponding selection updates are done later.
@@ -850,6 +871,7 @@ public class SelectionTrackerTest extends TestCase {
         new Selection(10, 10, 12, 12, 10, 12, false, SelectionTracker.DO_NOTHING));
   }
 
+  @Test
   public void testCompletionOnTextEdit() {
     runScenario(false,
         new RenderPreedit(1),
@@ -858,6 +880,7 @@ public class SelectionTrackerTest extends TestCase {
         new Selection(10, 10, 12, 12, 10, 12, false, SelectionTracker.RESET_CONTEXT));
   }
 
+  @Test
   public void testIgnoringMoveToTail() {
     runScenario(false,
         new RenderPreedit(1),  // "か|"

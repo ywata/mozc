@@ -35,11 +35,15 @@ import android.content.res.Configuration;
 import androidx.test.filters.SmallTest;
 
 import junit.framework.TestCase;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
 
 /**
  */
+@RunWith(AndroidJUnit4.class)
 public class KeyboardSpecificationNameTest extends TestCase {
-  @SmallTest
+  @SmallTest @Test
   public void testGetDeviceOrientationString() {
     class TestData extends Parameter {
       private final int orientation;
@@ -65,7 +69,7 @@ public class KeyboardSpecificationNameTest extends TestCase {
     }
   }
 
-  @SmallTest
+  @SmallTest @Test
   public void testFormatKeyboardName() {
     Configuration configuration = new Configuration();
     configuration.orientation = Configuration.ORIENTATION_PORTRAIT;

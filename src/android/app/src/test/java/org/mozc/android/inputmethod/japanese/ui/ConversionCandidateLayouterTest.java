@@ -43,9 +43,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
 /**
  */
-public class ConversionCandidateLayouterTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class ConversionCandidateLayouterTest {
+  private static final double epsilon = 0.01;
   private static final int VALUE_HEIGHT = 30;
   private static final int VALUE_VERTICAL_PADDING = 10;
 
@@ -58,6 +66,7 @@ public class ConversionCandidateLayouterTest extends TestCase {
     }
   };
 
+  @Test
   public void testSetViewSize() {
     ConversionCandidateLayouter layouter = new ConversionCandidateLayouter();
     layouter.setSpanFactory(DUMMY_SPAN_FACTORY);
@@ -69,6 +78,7 @@ public class ConversionCandidateLayouterTest extends TestCase {
     assertTrue(layouter.setViewSize(160, 480));
   }
 
+  @Test
   public void testPageSize() {
     ConversionCandidateLayouter layouter = new ConversionCandidateLayouter();
     layouter.setSpanFactory(DUMMY_SPAN_FACTORY);
@@ -89,6 +99,7 @@ public class ConversionCandidateLayouterTest extends TestCase {
     assertEquals(VALUE_HEIGHT + VALUE_VERTICAL_PADDING * 2, layouter.getPageHeight());
   }
 
+  @Test
   public void testBuildRowList() {
     class TestData extends Parameter {
       final String[] valueList;
@@ -176,6 +187,7 @@ public class ConversionCandidateLayouterTest extends TestCase {
                     Collections.<String>emptyList());
   }
 
+  @Test
   public void testLayoutSpanList_simple() {
     List<Span> spanList = new ArrayList<Span>();
     for (int i = 0; i < 5; ++i) {
@@ -186,11 +198,12 @@ public class ConversionCandidateLayouterTest extends TestCase {
 
     float[] expectedXCoord = {0, 20, 40, 60, 80, 100};
     for (int i = 0; i < spanList.size(); ++i) {
-      assertEquals(expectedXCoord[i], spanList.get(i).getLeft());
-      assertEquals(expectedXCoord[i + 1], spanList.get(i).getRight());
+      assertEquals(expectedXCoord[i], spanList.get(i).getLeft(), epsilon);
+      assertEquals(expectedXCoord[i + 1], spanList.get(i).getRight(), epsilon);
     }
   }
 
+  @Test
   public void testLayoutSpanList_underflow() {
     List<Span> spanList = new ArrayList<Span>();
     for (int i = 0; i < 5; ++i) {
@@ -202,21 +215,23 @@ public class ConversionCandidateLayouterTest extends TestCase {
     // The remaining chunks will be assigned to the spans.
     float[] expectedXCoord = {0, 40, 80, 120, 150, 180};
     for (int i = 0; i < spanList.size(); ++i) {
-      assertEquals(expectedXCoord[i], spanList.get(i).getLeft());
-      assertEquals(expectedXCoord[i + 1], spanList.get(i).getRight());
+      assertEquals(expectedXCoord[i], spanList.get(i).getLeft(), epsilon);
+      assertEquals(expectedXCoord[i + 1], spanList.get(i).getRight(), epsilon);
     }
   }
 
+  @Test
   public void testLayoutSpanList_overflow() {
     List<Span> spanList = new ArrayList<Span>();
     spanList.add(createSpan("20"));
 
     ConversionCandidateLayouter.layoutSpanList(spanList, 100, 10, DUMMY_CHUNK_METRICS, new int[10]);
 
-    assertEquals(0f, spanList.get(0).getLeft());
-    assertEquals(100f, spanList.get(0).getRight());
+    assertEquals(0f, spanList.get(0).getLeft(), epsilon);
+    assertEquals(100f, spanList.get(0).getRight(), epsilon);
   }
 
+  @Test
   public void testLayoutRow() {
     List<Row> rowList = new ArrayList<Row>();
     for (int i = 0; i < 5; ++i) {
@@ -226,9 +241,9 @@ public class ConversionCandidateLayouterTest extends TestCase {
     ConversionCandidateLayouter.layoutRowList(rowList, 100, 30);
     for (int i = 0; i < rowList.size(); ++i) {
       Row row = rowList.get(i);
-      assertEquals(i * 30f, row.getTop());
-      assertEquals(100f, row.getWidth());
-      assertEquals(30f, row.getHeight());
+      assertEquals(i * 30f, row.getTop(), epsilon);
+      assertEquals(100f, row.getWidth(), epsilon);
+      assertEquals(30f, row.getHeight(), epsilon);
     }
   }
 }

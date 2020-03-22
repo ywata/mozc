@@ -38,9 +38,16 @@ import junit.framework.TestCase;
 import java.io.File;
 import java.util.Arrays;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+
 /**
  */
-public class UserDictionaryUtilTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class UserDictionaryUtilTest {
+  @Test
   public void testGenerateDictionaryNameByUri() {
     class TestData extends Parameter {
       final String expectedName;
@@ -82,7 +89,8 @@ public class UserDictionaryUtilTest extends TestCase {
     };
 
     for (TestData testData : testDataList) {
-      assertEquals(testData.toString(),
+      //TODO: remove TestCase dependency
+      TestCase.assertEquals(testData.toString(),
                    testData.expectedName,
                    UserDictionaryUtil.generateDictionaryNameByUri(
                        Uri.fromFile(new File(testData.filePath)),

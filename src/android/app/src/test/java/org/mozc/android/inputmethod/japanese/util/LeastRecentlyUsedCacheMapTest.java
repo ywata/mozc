@@ -33,9 +33,18 @@ import junit.framework.TestCase;
 
 import java.util.Map;
 
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
 /**
  */
-public class LeastRecentlyUsedCacheMapTest extends TestCase {
+@RunWith(AndroidJUnit4.class)
+public class LeastRecentlyUsedCacheMapTest {
+  @Test
   public void testLeastRecentlyUsedCacheMap() {
     // Set max entry size to 5.
     Map<Integer, Integer> cacheMap = new LeastRecentlyUsedCacheMap<Integer, Integer>(5);
